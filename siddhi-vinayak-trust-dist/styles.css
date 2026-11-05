@@ -4118,3 +4118,18 @@ dialog.custom-modal::backdrop {
     width: 100%;
   }
 }
+
+/* Hide Netlify Injected Drawer & Badge */
+#netlify-drawer,
+[data-netlify-drawer],
+.netlify-drawer,
+iframe[src*="netlify"],
+div[class*="netlify-drawer"],
+netlify-drawer,
+div[id*="netlify"],
+div[data-netlify-deploy-id] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
