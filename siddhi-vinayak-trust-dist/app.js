@@ -519,7 +519,7 @@ function processDonation() {
   appState.donorInfo = {
     name: name,
     phone: phone,
-    email: email || 'donor@siddhivinayaktrust.org',
+    email: email || 'donor@siddhivinayakjankalyantrust.org',
     pan: pan || 'Not Provided (General Seva)'
   };
 
@@ -641,7 +641,7 @@ function completePaymentAndShowReceipt() {
     txnId: userTxn,
     donorName: appState.donorInfo.name || 'Respected Contributor',
     donorPhone: appState.donorInfo.phone || '+91 9876543210',
-    donorEmail: appState.donorInfo.email || 'donor@siddhivinayaktrust.org',
+    donorEmail: appState.donorInfo.email || 'donor@siddhivinayakjankalyantrust.org',
     donorPan: appState.donorInfo.pan || 'Not Provided (General Seva)',
     cause: appState.currentCause || 'General Community Welfare',
     amount: appState.currentAmount || 1100,
@@ -804,7 +804,7 @@ const leadersData = {
     poster: 'assets/leader_rk_tripathi.png',
     avatar: 'assets/leader_rk_tripathi_avatar.png',
     phone: '+91 7390050061 / +91 9214873534',
-    email: 'info@siddhivinayaktrust.org',
+    email: 'info@siddhivinayakjankalyantrust.org',
     location: 'रुद्रपुर खजनी, गोरखपुर (उत्तर प्रदेश) - 273212',
     quote_hi: '"सेवा ही संकल्प, विकास ही लक्ष्य • सच्ची सफलता वही है जो पंक्ति के अंतिम व्यक्ति तक पहुंचे।"',
     quote_en: '"Service is our Resolve, Development is our Goal • True success is only meaningful when it reaches the last person in the line."',
@@ -878,7 +878,7 @@ const leadersData = {
     poster: 'assets/leader_malti_tripathi.jpg?v=3',
     avatar: 'assets/leader_malti_tripathi_avatar.jpg?v=3',
     phone: '+91 7451952337',
-    email: 'info@siddhivinayakjakalyantrust.org',
+    email: 'info@siddhivinayakjankalyantrust.org',
     location: 'Gorakhpur, Uttar Pradesh',
     quote_hi: '"सेवा कोई कर्तव्य नहीं, यह जीवनभर का संकल्प है। हमारा लक्ष्य है कि समाज के हर व्यक्ति का सशक्तिकरण हो और हर आवाज सुनी जाए।"',
     quote_en: '"Service is not just a duty; it is a lifetime commitment. We strive to build a future where every individual is empowered and every voice is heard."',
@@ -928,7 +928,7 @@ const leadersData = {
     poster: 'assets/leader_rahul_tripathi.png',
     avatar: 'assets/leader_rahul_tripathi_avatar.png',
     phone: '+91 8449015875',
-    email: 'info@siddhivinayaktrust.org',
+    email: 'info@siddhivinayakjankalyantrust.org',
     location: 'गोरखपुर एवं पूर्वांचल अंचल',
     quote_hi: '"युवा सोच, पारदर्शी कार्य - सेवा ही लक्ष्य • सेवा - निष्ठा - पारदर्शिता • सेवा - सुरक्षा - समर्पण • युवा - निर्भय - समर्पित"',
     quote_en: '"Yuva Soch, Pardarshi Karya - Seva Hi Lakshya • Protection With Pride - Trusted & Reliable Since 2014"',
@@ -1016,7 +1016,7 @@ const leadersData = {
     poster: 'assets/leader_santosh_tripathi.jpg?v=2',
     avatar: 'assets/leader_santosh_tripathi_avatar.jpg?v=2',
     phone: '+91 8858588838',
-    email: 'info@siddhivinayaktrust.org',
+    email: 'info@siddhivinayakjankalyantrust.org',
     location: 'अखिल भारतीय कार्यक्षेत्र (गोरखपुर पंजीकृत कार्यालय व आगरा उप-मुख्यालय)',
     quote_hi: '"सेवा ही पूजा है • तन, मन एवं धन से सेवा (यथासंभव दान) • 32 वर्षों की अनवरत तपस्या, पारिवारिक संस्कार और राष्ट्रव्यापी सेवा का संकल्प"',
     quote_en: '"Seva Hi Pooja Hai • Committed to Nation, Service, Integrity & Public Welfare • 32 Years of Tapasya"',
