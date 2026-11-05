@@ -805,7 +805,7 @@ const leadersData = {
     avatar: 'assets/leader_rk_tripathi_avatar.png',
     phone: '+91 7390050061 / +91 9214873534',
     email: 'info@siddhivinayakjankalyantrust.org',
-    location: 'रुद्रपुर खजनी, गोरखपुर (उत्तर प्रदेश) - 273212',
+    location: 'रुद्रपुर खजानी, गोरखपुर (उत्तर प्रदेश) - 273212',
     quote_hi: '"सेवा ही संकल्प, विकास ही लक्ष्य • सच्ची सफलता वही है जो पंक्ति के अंतिम व्यक्ति तक पहुंचे।"',
     quote_en: '"Service is our Resolve, Development is our Goal • True success is only meaningful when it reaches the last person in the line."',
     content_hi: `
@@ -863,7 +863,7 @@ const leadersData = {
       </ul>
 
       <div class="bio-modal-section-title">📜 SIDDHI VINAYAK JANKALYAN TRUST: Our Sacred Pledge</div>
-      <p class="bio-modal-p">Headquarters: Rudrapur, Khajni, Gorakhpur (Uttar Pradesh) | Founder & Chief Trustee: Shri R. K. Tripathi. The Trust is the culmination of 50 years of humanitarian experience.</p>
+      <p class="bio-modal-p">Headquarters: Rudrapur Khajani, Gorakhpur (Uttar Pradesh) | Founder & Chief Trustee: Shri R. K. Tripathi. The Trust is the culmination of 50 years of humanitarian experience.</p>
       <p class="bio-modal-p"><strong>Our Philosophy:</strong> "We do not believe in the politics of votes; we believe in the policy of social transformation. Our goal is not personal progress, but Nation Building through Society Building."</p>
     `
   },
