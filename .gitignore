@@ -1,0 +1,12 @@
+# Dependencies and build output
+.netlify/
+*.zip
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment variables
+.env
+.env.local

@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Siddhi Vinayak Jan Kalyan Trust | Official Charity & Donation Portal</title>
+  <meta name="description" content="Official website of Siddhi Vinayak Jan Kalyan Trust. Committed to Community Welfare, Education, Healthcare, Livelihood and Empowerment. Donate with 12A & 80G Tax Exemption.">
+  <meta name="keywords" content="Siddhi Vinayak Jan Kalyan Trust, NGO Gorakhpur, Charity UP, Donate Fund, Rameshwar Kumar Tripathi, 12A & 80G Tax Exemption, Vidya Daan, Annadaan">
+
+  <!-- Google Fonts: Cinzel, Rozha One, Plus Jakarta Sans, Noto Sans Devanagari -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Rozha+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="assets/ganesha_seal.png">
+</head>
+<body>
+
+  <!-- Subtle Sacred Mandala Pattern Background -->
+  <div class="bg-mandala-overlay" aria-hidden="true"></div>
+
+  <!-- ================= TOP ANNOUNCEMENT BAR ================= -->
+  <!-- ================= TOP ANNOUNCEMENT BAR ================= -->
+  <header class="top-bar">
+    <div class="top-bar-inner">
+      <div class="top-announcement">
+        <span class="top-badge" data-i18n="top_badge">Official Portal</span>
+        <span class="top-alert-text" data-i18n="top_alert">Govt. Reg No: SVJKT/2026/VI42</span>
+      </div>
+
+      <div class="top-contacts">
+        <a href="tel:+917390050061" class="top-contact-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
+          <span>+91 7390050061</span>
+        </a>
+        <a href="mailto:info@siddhivinayaktrust.org" class="top-contact-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <span>info@siddhivinayaktrust.org</span>
+        </a>
+
+        <!-- Language Switcher -->
+        <div class="lang-switcher" aria-label="Language Selector">
+          <button type="button" class="lang-btn lang-btn-en active" id="lang-en" onclick="setLanguage('en')">English</button>
+          <button type="button" class="lang-btn lang-btn-hi" id="lang-hi" onclick="setLanguage('hi')">हिन्दी</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MAIN NAVIGATION BAR ================= -->
+  <nav class="main-header" id="main-header" aria-label="Primary Navigation">
+    <div class="navbar">
+      <a href="#home" class="brand-link" aria-label="Siddhi Vinayak Trust Home">
+        <div class="brand-logo-wrap">
+          <img src="assets/ganesha_seal.png" alt="Siddhi Vinayak Trust Golden Emblem" class="brand-logo-img">
+          <div class="brand-glow-halo" aria-hidden="true"></div>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title-hi">सिद्धि विनायक जन कल्याण ट्रस्ट</span>
+          <span class="brand-title-en">SIDDHI VINAYAK JAN KALYAN TRUST</span>
+          <span class="brand-tagline" data-i18n="brand_tagline">COMMUNITY WELFARE • EDUCATION • HEALTHCARE • LIVELIHOOD • EMPOWERMENT</span>
+        </div>
+      </a>
+
+      <!-- Mobile Dimming Backdrop Overlay -->
+      <div class="nav-backdrop" id="nav-backdrop" onclick="closeMobileMenu()" aria-hidden="true"></div>
+
+      <!-- Navigation Menu & Mobile Drawer -->
+      <div class="nav-drawer" id="nav-drawer">
+        <div class="nav-drawer-header">
+          <div class="drawer-trust-badge">
+            <span class="drawer-symbol">ॐ</span>
+            <span class="drawer-motto">॥ धर्मो रक्षति रक्षितः • नर सेवा ही नारायण सेवा ॥</span>
+          </div>
+          <!-- Mobile Drawer Language Switcher -->
+          <div class="lang-switcher drawer-lang" aria-label="Drawer Language Selector">
+            <button type="button" class="lang-btn lang-btn-en active" id="lang-mob-en" onclick="setLanguage('en')">English</button>
+            <button type="button" class="lang-btn lang-btn-hi" id="lang-mob-hi" onclick="setLanguage('hi')">हिन्दी</button>
+          </div>
+        </div>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li>
+            <a href="#home" class="nav-link active">
+              <span class="nav-link-icon" aria-hidden="true">🏛️</span>
+              <span class="nav-link-text" data-i18n="nav_home">Home</span>
+              <span class="nav-arrow" aria-hidden="true">›</span>
+            </a>
+          </li>
+          <li>
+            <a href="#about" class="nav-link">
+              <span class="nav-link-icon" aria-hidden="true">🌸</span>
+              <span class="nav-link-text" data-i18n="nav_about">About Us</span>
+              <span class="nav-arrow" aria-hidden="true">›</span>
+            </a>
+          </li>
+          <li>
+            <a href="#causes" class="nav-link">
+              <span class="nav-link-icon" aria-hidden="true">🤝</span>
+              <span class="nav-link-text" data-i18n="nav_causes">Causes & Funds</span>
+              <span class="nav-arrow" aria-hidden="true">›</span>
+            </a>
+          </li>
+          <li>
+            <a href="#donate" class="nav-link">
+              <span class="nav-link-icon" aria-hidden="true">🪙</span>
+              <span class="nav-link-text" data-i18n="nav_donate">Donate Hub</span>
+              <span class="nav-arrow" aria-hidden="true">›</span>
+            </a>
+          </li>
+          <li>
+            <a href="#leadership" class="nav-link">
+              <span class="nav-link-icon" aria-hidden="true">👥</span>
+              <span class="nav-link-text" data-i18n="nav_leadership">Leadership</span>
+              <span class="nav-arrow" aria-hidden="true">›</span>
+            </a>
+          </li>
+          <li>
+            <a href="#transparency" class="nav-link">
+              <span class="nav-link-icon" aria-hidden="true">📜</span>
+              <span class="nav-link-text" data-i18n="nav_transparency">Charter & Reg</span>
+              <span class="nav-arrow" aria-hidden="true">›</span>
+            </a>
+          </li>
+          <li>
+            <a href="#contact" class="nav-link">
+              <span class="nav-link-icon" aria-hidden="true">📞</span>
+              <span class="nav-link-text" data-i18n="nav_contact">Contact</span>
+              <span class="nav-arrow" aria-hidden="true">›</span>
+            </a>
+          </li>
+          <li class="nav-item-donate">
+            <button type="button" class="btn-donate-nav" onclick="openDonateModal()">
+              <svg class="heart-pulse-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+              <span data-i18n="nav_btn_donate">Donate Now</span>
+            </button>
+          </li>
+        </ul>
+
+        <div class="nav-drawer-footer">
+          <div class="drawer-contact-chips">
+            <a href="tel:+917390050061" class="drawer-chip">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
+              <span>+91 7390050061</span>
+            </a>
+            <a href="mailto:info@siddhivinayaktrust.org" class="drawer-chip">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              <span>info@siddhivinayaktrust.org</span>
+            </a>
+          </div>
+          <div class="drawer-tax-note">
+            <span>🛡️ 100% Tax Exempted under 12A & 80G • Govt Reg: SVJKT/2026/VI42</span>
+          </div>
+        </div>
+      </div>
+
+      <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" onclick="toggleMobileMenu()">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="hero-section" id="home">
+    <canvas id="particle-canvas"></canvas>
+    <div class="hero-mandala-bg"></div>
+    <div class="hero-container">
+      <div class="hero-seal-wrapper">
+        <img src="assets/ganesha_seal.png" alt="Divine Emblem" class="hero-seal-img">
+      </div>
+
+      <h2 class="hero-devanagari-title">सिद्धि विनायक जन कल्याण ट्रस्ट</h2>
+      <h1 class="hero-english-title">SIDDHI VINAYAK JAN KALYAN TRUST</h1>
+
+      <div class="hero-tagline-bar">
+        <span data-i18n="tag_welfare">Community Welfare</span>
+        <span class="bullet">•</span>
+        <span data-i18n="tag_edu">Education</span>
+        <span class="bullet">•</span>
+        <span data-i18n="tag_health">Healthcare</span>
+        <span class="bullet">•</span>
+        <span data-i18n="tag_livelihood">Livelihood</span>
+        <span class="bullet">•</span>
+        <span data-i18n="tag_empower">Empowerment</span>
+      </div>
+
+      <p class="hero-description" data-i18n="hero_desc">
+        Dedicated to selfless service and grassroots social transformation across Uttar Pradesh. Empowering underprivileged children with education, healing communities with free medical camps, and providing dignified livelihoods with utmost transparency.
+      </p>
+
+      <div class="trust-badges-strip">
+        <div class="trust-badge-pill">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+          <span>Govt Reg No: <strong>SVJKT/2026/VI42</strong></span>
+        </div>
+        <div class="trust-badge-pill">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+          <span>पंजीकरण संख्या: <strong>VI42</strong></span>
+        </div>
+        <div class="trust-badge-pill">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          <span data-i18n="tax_exempt_badge">12A + 80G Tax Exemption Available</span>
+        </div>
+      </div>
+
+      <div class="hero-cta-group">
+        <button type="button" class="btn-hero-primary" onclick="openDonateModal()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          <span data-i18n="btn_donate_now">Donate & Save Tax</span>
+        </button>
+        <a href="#transparency" class="btn-hero-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+          <span data-i18n="btn_view_charter">View Trust Charter</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= IMPACT NUMBERS COUNTER STRIP ================= -->
+  <div class="impact-counters-bar">
+    <div class="impact-grid">
+      <div class="impact-item">
+        <div class="impact-number" data-target="15400">15,400+</div>
+        <div class="impact-label" data-i18n="impact_meals">Meals Distributed (अन्नदान)</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-number" data-target="1850">1,850+</div>
+        <div class="impact-label" data-i18n="impact_students">Rural Students Supported</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-number" data-target="35">35+</div>
+        <div class="impact-label" data-i18n="impact_camps">Free Medical & Health Camps</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-number" data-target="420">420+</div>
+        <div class="impact-label" data-i18n="impact_women">Women Trained in Livelihood</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= INTERACTIVE DONATION & FUNDRAISING HUB ================= -->
+  <section class="section" id="donate">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-subtitle-tag" data-i18n="fund_subtitle">Punya Karyakram • Daan Seva</span>
+        <h2 class="section-title" data-i18n="fund_title">Make an Impact — Donate to the Trust</h2>
+        <p class="section-desc" data-i18n="fund_desc">Your sacred contribution directly empowers impoverished students, delivers medicine to rural villages, and feeds destitute families. 100% transparent and verified.</p>
+        <div class="gold-divider"></div>
+      </div>
+
+      <div class="fund-hub-card">
+        <!-- Form Left Side -->
+        <div class="fund-form-side">
+          <div class="form-group-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+            <span data-i18n="choose_cause_title">1. Select Cause / Project</span>
+          </div>
+
+          <div class="cause-pills" id="cause-pills">
+            <button type="button" class="cause-pill-btn active" data-cause="General Community Welfare" onclick="selectCause(this)">All Community Welfare</button>
+            <button type="button" class="cause-pill-btn" data-cause="Vidya Daan - Child Education" onclick="selectCause(this)">Child Education (विद्या दान)</button>
+            <button type="button" class="cause-pill-btn" data-cause="Arogya Seva - Free Medical Relief" onclick="selectCause(this)">Healthcare & Camps (आरोग्य)</button>
+            <button type="button" class="cause-pill-btn" data-cause="Annadaan - Food Distribution" onclick="selectCause(this)">Annadaan (अन्नदान)</button>
+            <button type="button" class="cause-pill-btn" data-cause="Mahila Swavalamban - Livelihood" onclick="selectCause(this)">Women Skill Center</button>
+          </div>
+
+          <div class="form-group-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09V20h-2.67v-1.93c-1.71-.36-3.16-1.46-3.27-3.4h1.96c.1 1.05.82 1.87 2.22 1.87 1.39 0 2.05-.72 2.05-1.57 0-1.07-.84-1.55-2.61-2.02-2.16-.57-3.44-1.4-3.44-3.2 0-1.63 1.25-2.84 2.87-3.22V5h2.67v1.94c1.47.33 2.7 1.32 2.87 3.01h-1.98c-.14-.94-.78-1.55-1.92-1.55-1.22 0-1.89.65-1.89 1.48 0 .93.75 1.39 2.45 1.85 2.37.64 3.6 1.47 3.6 3.32 0 1.77-1.31 3.03-3.14 3.44z"/></svg>
+            <span data-i18n="choose_amount_title">2. Select Contribution Amount</span>
+          </div>
+
+          <!-- Predefined Amounts Grid -->
+          <div class="amount-grid">
+            <button type="button" class="amount-btn" data-amount="500" onclick="selectAmount(500, this)">₹500</button>
+            <button type="button" class="amount-btn active" data-amount="1100" onclick="selectAmount(1100, this)">₹1,100</button>
+            <button type="button" class="amount-btn" data-amount="2500" onclick="selectAmount(2500, this)">₹2,500</button>
+            <button type="button" class="amount-btn" data-amount="5100" onclick="selectAmount(5100, this)">₹5,100</button>
+            <button type="button" class="amount-btn" data-amount="11000" onclick="selectAmount(11000, this)">₹11,000</button>
+            <button type="button" class="amount-btn" data-amount="25000" onclick="selectAmount(25000, this)">₹25,000</button>
+          </div>
+
+          <div class="custom-amount-wrap">
+            <span class="custom-amount-prefix">₹</span>
+            <input type="number" id="custom-amount-input" class="custom-amount-input" placeholder="Or Enter Custom Amount (INR)" value="1100" oninput="handleCustomAmount(this.value)">
+          </div>
+
+          <!-- Dynamic Real-Time Impact Preview -->
+          <div class="impact-preview-box" id="impact-preview-box">
+            <div class="impact-preview-title" data-i18n="impact_preview_label">Your Direct Social Impact:</div>
+            <div class="impact-preview-text" id="impact-preview-text">₹1,100 provides full stationery, notebook set, and winter sweater for 2 village primary school children.</div>
+          </div>
+
+          <!-- Donor Details Form -->
+          <div class="form-group-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            <span data-i18n="donor_info_title">3. Donor Information (For 12A & 80G Receipt)</span>
+          </div>
+
+          <div class="donor-inputs-grid">
+            <div class="input-field-wrap">
+              <label class="input-label" for="donor-name" data-i18n="lbl_name">Full Name *</label>
+              <input type="text" id="donor-name" class="text-input" placeholder="e.g. Ramesh Chandra" required>
+            </div>
+            <div class="input-field-wrap">
+              <label class="input-label" for="donor-phone" data-i18n="lbl_phone">Mobile Number *</label>
+              <input type="tel" id="donor-phone" class="text-input" placeholder="e.g. 9876543210" required>
+            </div>
+            <div class="input-field-wrap">
+              <label class="input-label" for="donor-email" data-i18n="lbl_email">Email Address</label>
+              <input type="email" id="donor-email" class="text-input" placeholder="e.g. name@example.com">
+            </div>
+            <div class="input-field-wrap">
+              <label class="input-label" for="donor-pan" data-i18n="lbl_pan">PAN Card No. (For 12A & 80G Tax Benefit)</label>
+              <input type="text" id="donor-pan" class="text-input" placeholder="ABCDE1234F" style="text-transform:uppercase;">
+            </div>
+          </div>
+
+          <button type="button" class="btn-proceed-donation" onclick="processDonation()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span data-i18n="btn_generate_receipt">Generate Donation Slip & Pay via UPI</span>
+          </button>
+        </div>
+
+        <!-- QR & Bank Transfer Right Side -->
+        <div class="fund-summary-side">
+          <div>
+            <div class="summary-header">
+              <h3 class="summary-title" data-i18n="instant_upi_title">Instant UPI & Direct Bank Seva</h3>
+              <p class="summary-desc" data-i18n="instant_upi_desc">Zero transaction fee. Scan using any UPI application (Google Pay, PhonePe, Paytm, BHIM, Cred).</p>
+            </div>
+
+            <div class="qr-card">
+              <div class="qr-code-box">
+                <img id="dynamic-qr-img" src="" alt="Dynamic UPI QR Code" class="qr-code-img">
+              </div>
+              <div class="qr-upi-id" onclick="copyUpiId()" title="Click to copy UPI ID">
+                <span id="display-upi-id">shantanu.s08@ptaxis.com</span> 📋 (Click to Copy)
+              </div>
+              <div class="qr-apps-icons">
+                <span>GPay</span> • <span>PhonePe</span> • <span>Paytm</span> • <span>BHIM</span>
+              </div>
+            </div>
+
+            <!-- Bank Transfer Details -->
+            <div class="bank-details-box">
+              <div class="bank-row">
+                <span class="bank-label">Trust Account Name:</span>
+                <span class="bank-value">Siddhi Vinayak Jan Kalyan Trust</span>
+              </div>
+              <div class="bank-row">
+                <span class="bank-label">Account Number:</span>
+                <span class="bank-value" id="bank-acc">50200084729103</span>
+              </div>
+              <div class="bank-row">
+                <span class="bank-label">IFSC Code:</span>
+                <span class="bank-value">HDFC0001824</span>
+              </div>
+              <div class="bank-row">
+                <span class="bank-label">Bank & Branch:</span>
+                <span class="bank-value">HDFC Bank, Gorakhpur</span>
+              </div>
+              <div class="bank-row">
+                <span class="bank-label">Registration No:</span>
+                <span class="bank-value">SVJKT/2026/VI42</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 20px; font-size: 0.8rem; color: #94A3B8; text-align: center;">
+            🔒 256-Bit Encrypted & Verified Non-Profit Bank Account
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ACTIVE CAUSES PORTFOLIO ================= -->
+  <section class="section" id="causes" style="background-color: #F8F5EE;">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-subtitle-tag" data-i18n="causes_badge">Verified Campaigns</span>
+        <h2 class="section-title" data-i18n="causes_title">Our Priority Social Missions</h2>
+        <p class="section-desc" data-i18n="causes_desc">Every penny is deployed with complete accountability. Select a campaign below to fuel hope and dignity.</p>
+        <div class="gold-divider"></div>
+      </div>
+
+      <div class="causes-grid">
+        <!-- Cause 1: Education -->
+        <article class="cause-card">
+          <div class="cause-image-wrap">
+            <img src="assets/cause_education.jpg" alt="Child Education Support" class="cause-img">
+            <span class="cause-category-badge" data-i18n="cat_edu">Vidya Daan</span>
+          </div>
+          <div class="cause-content">
+            <h3 class="cause-title" data-i18n="cause1_title">Vidya Jyoti: Sponsoring 500 Rural Students</h3>
+            <p class="cause-desc" data-i18n="cause1_desc">Providing complete school kits, syllabus books, uniforms, and digital study materials to underprivileged children in Gorakhpur and Deoria villages.</p>
+            <div class="cause-progress-section">
+              <div class="cause-progress-header">
+                <span>Raised: <strong>₹3,65,000</strong></span>
+                <span style="color: var(--gold-dark);">73%</span>
+              </div>
+              <div class="cause-progress-bar-bg">
+                <div class="cause-progress-fill" style="width: 73%;"></div>
+              </div>
+            </div>
+            <div class="cause-stats-meta">
+              <span>Goal: ₹5,00,000</span>
+              <span>182 Donors</span>
+            </div>
+            <button type="button" class="cause-btn-donate" onclick="presetCauseAndDonate('Vidya Daan - Child Education', 1100)" data-i18n="btn_support_cause">Support This Cause</button>
+          </div>
+        </article>
+
+        <!-- Cause 2: Healthcare -->
+        <article class="cause-card">
+          <div class="cause-image-wrap">
+            <img src="assets/cause_healthcare.jpg" alt="Free Medical Camp" class="cause-img">
+            <span class="cause-category-badge" data-i18n="cat_health">Arogya Seva</span>
+          </div>
+          <div class="cause-content">
+            <h3 class="cause-title" data-i18n="cause2_title">Free Rural Health Checkup & Eye Camps</h3>
+            <p class="cause-desc" data-i18n="cause2_desc">Organizing weekly medical camps in remote villages, offering free consultations, essential medicines, blood tests, and cataract screenings for senior citizens.</p>
+            <div class="cause-progress-section">
+              <div class="cause-progress-header">
+                <span>Raised: <strong>₹5,20,000</strong></span>
+                <span style="color: var(--gold-dark);">69%</span>
+              </div>
+              <div class="cause-progress-bar-bg">
+                <div class="cause-progress-fill" style="width: 69%;"></div>
+              </div>
+            </div>
+            <div class="cause-stats-meta">
+              <span>Goal: ₹7,50,000</span>
+              <span>240 Donors</span>
+            </div>
+            <button type="button" class="cause-btn-donate" onclick="presetCauseAndDonate('Arogya Seva - Free Medical Relief', 2500)" data-i18n="btn_support_cause">Support This Cause</button>
+          </div>
+        </article>
+
+        <!-- Cause 3: Food / Annadaan -->
+        <article class="cause-card">
+          <div class="cause-image-wrap">
+            <img src="assets/cause_food.jpg" alt="Annadaan and Ration Kit Distribution" class="cause-img">
+            <span class="cause-category-badge" data-i18n="cat_food">Annadaan</span>
+          </div>
+          <div class="cause-content">
+            <h3 class="cause-title" data-i18n="cause3_title">Annadaan Maha-Yajna: Monthly Ration Kits</h3>
+            <p class="cause-desc" data-i18n="cause3_desc">Delivering comprehensive monthly ration packages (flour, rice, dal, mustard oil, spices) to widowed, disabled, and destitute rural families.</p>
+            <div class="cause-progress-section">
+              <div class="cause-progress-header">
+                <span>Raised: <strong>₹2,55,000</strong></span>
+                <span style="color: var(--gold-dark);">85%</span>
+              </div>
+              <div class="cause-progress-bar-bg">
+                <div class="cause-progress-fill" style="width: 85%;"></div>
+              </div>
+            </div>
+            <div class="cause-stats-meta">
+              <span>Goal: ₹3,00,000</span>
+              <span>310 Donors</span>
+            </div>
+            <button type="button" class="cause-btn-donate" onclick="presetCauseAndDonate('Annadaan - Food Distribution', 1100)" data-i18n="btn_support_cause">Support This Cause</button>
+          </div>
+        </article>
+
+        <!-- Cause 4: Women Empowerment -->
+        <article class="cause-card">
+          <div class="cause-image-wrap">
+            <img src="assets/cause_women.jpg" alt="Women Skill Empowerment" class="cause-img">
+            <span class="cause-category-badge" data-i18n="cat_women">Swavalamban</span>
+          </div>
+          <div class="cause-content">
+            <h3 class="cause-title" data-i18n="cause4_title">Mahila Sashaktikaran: Sewing & Skill Labs</h3>
+            <p class="cause-desc" data-i18n="cause4_desc">Providing free tailoring, handicraft training, and sewing machines to rural women to help them achieve financial self-reliance and honor.</p>
+            <div class="cause-progress-section">
+              <div class="cause-progress-header">
+                <span>Raised: <strong>₹3,10,000</strong></span>
+                <span style="color: var(--gold-dark);">77%</span>
+              </div>
+              <div class="cause-progress-bar-bg">
+                <div class="cause-progress-fill" style="width: 77%;"></div>
+              </div>
+            </div>
+            <div class="cause-stats-meta">
+              <span>Goal: ₹4,00,000</span>
+              <span>154 Donors</span>
+            </div>
+            <button type="button" class="cause-btn-donate" onclick="presetCauseAndDonate('Mahila Swavalamban - Livelihood', 5100)" data-i18n="btn_support_cause">Support This Cause</button>
+          </div>
+        </article>
+
+        <!-- Cause 5: Elder Care -->
+        <article class="cause-card">
+          <div class="cause-image-wrap">
+            <img src="assets/cause_elder.jpg" alt="Elder Care and Dignity" class="cause-img">
+            <span class="cause-category-badge" data-i18n="cat_elder">Elder Care</span>
+          </div>
+          <div class="cause-content">
+            <h3 class="cause-title" data-i18n="cause5_title">Vrindavan Seva: Support for Abandoned Elders</h3>
+            <p class="cause-desc" data-i18n="cause5_desc">Offering warm blankets, daily nutrition, walking aids, and compassionate care to homeless and abandoned elderly citizens.</p>
+            <div class="cause-progress-section">
+              <div class="cause-progress-header">
+                <span>Raised: <strong>₹1,85,000</strong></span>
+                <span style="color: var(--gold-dark);">74%</span>
+              </div>
+              <div class="cause-progress-bar-bg">
+                <div class="cause-progress-fill" style="width: 74%;"></div>
+              </div>
+            </div>
+            <div class="cause-stats-meta">
+              <span>Goal: ₹2,50,000</span>
+              <span>96 Donors</span>
+            </div>
+            <button type="button" class="cause-btn-donate" onclick="presetCauseAndDonate('Vrindavan Seva - Elder Care', 1100)" data-i18n="btn_support_cause">Support This Cause</button>
+          </div>
+        </article>
+
+        <!-- Cause 6: Emergency Relief -->
+        <article class="cause-card" style="border: 2px solid var(--gold-primary);">
+          <div class="cause-image-wrap" style="background: radial-gradient(circle, #102A54 0%, #06152F 100%); display: flex; align-items: center; justify-content: center; color: var(--gold-light);">
+            <div style="text-align: center; padding: 20px;">
+              <img src="assets/ganesha_seal.png" alt="Trust Seal" style="width: 80px; height: 80px; border-radius: 50%; margin-bottom: 8px;">
+              <div style="font-family: 'Cinzel', serif; font-size: 1.1rem; font-weight: 700;">Trust General Seva Fund</div>
+            </div>
+            <span class="cause-category-badge" style="background: var(--vermilion); color: #FFF;" data-i18n="cat_general">General Corpus</span>
+          </div>
+          <div class="cause-content">
+            <h3 class="cause-title" data-i18n="cause6_title">Emergency Community Welfare Corpus</h3>
+            <p class="cause-desc" data-i18n="cause6_desc">Unrestricted funds deployed promptly for medical emergencies, flood/disaster relief, orphan support, and urgent community crises.</p>
+            <div class="cause-progress-section">
+              <div class="cause-progress-header">
+                <span>Raised: <strong>₹8,40,000</strong></span>
+                <span style="color: var(--gold-dark);">84%</span>
+              </div>
+              <div class="cause-progress-bar-bg">
+                <div class="cause-progress-fill" style="width: 84%;"></div>
+              </div>
+            </div>
+            <div class="cause-stats-meta">
+              <span>Goal: ₹10,00,000</span>
+              <span>480 Donors</span>
+            </div>
+            <button type="button" class="cause-btn-donate" onclick="presetCauseAndDonate('General Community Welfare', 2500)" data-i18n="btn_support_cause">Support This Cause</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT THE TRUST & FOUNDER ================= -->
+  <section class="section" id="about">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-subtitle-tag" data-i18n="about_badge">About The Founder & Trust</span>
+        <h2 class="section-title" data-i18n="about_title">Service is our Resolve, Development is our Goal</h2>
+        <p class="section-desc" data-i18n="about_desc">Who We Are: A Journey Beyond Position, Defined by Purpose. Reaching the last person in the line.</p>
+        <div class="gold-divider"></div>
+      </div>
+
+      <!-- Founder Spotlight Presentation -->
+      <div class="founder-spotlight-card">
+        <div class="founder-spotlight-grid">
+          <div class="founder-spotlight-content">
+            <span class="leader-role-badge" style="margin-bottom: 12px;" data-i18n="founder_badge">Philosophy In Action • 5 Decades of Seva</span>
+            <h3 style="font-family: 'Rozha One', 'Noto Sans Devanagari', serif; font-size: clamp(1.6rem, 3.5vw, 2.2rem); color: var(--navy-dark); margin-bottom: 6px;">
+              श्री आर. के. त्रिपाठी
+            </h3>
+            <div style="font-family: 'Cinzel', serif; font-size: 1.15rem; font-weight: 800; color: var(--navy-royal); margin-bottom: 14px;">
+              Shri R. K. Tripathi — Founder & Chief Trustee
+            </div>
+
+            <p class="about-story-p" data-i18n="founder_p1">
+              Shri R. K. Tripathi is not merely a name; he is a philosophy in action. He represents a rare confluence of visionary leadership, fearless journalism, ethical entrepreneurship, and selfless social service.
+            </p>
+            <p class="about-story-p" data-i18n="founder_p2">
+              Guided by the values and path shown by his father, he has lived by one principle: <em>"True success is only meaningful when it reaches the last person in the line."</em> His influence is not confined to a single domain. Over five decades, he has created a lasting impact across media, grassroots governance, business, and humanitarian service.
+            </p>
+
+            <div class="leader-quote-box" style="margin: 20px 0;">
+              <div class="leader-quote-text" data-i18n="founder_quote">
+                "We do not believe in the politics of votes; we believe in the policy of social transformation. Our goal is not personal progress, but Nation Building through Society Building."
+              </div>
+              <span class="leader-quote-author">— Shri R. K. Tripathi, Founder & Chief Trustee</span>
+            </div>
+
+            <div class="about-badges-group" style="margin-top: 18px;">
+              <div class="about-badge-card gold-border">
+                <div class="about-badge-title">100% Financial Transparency</div>
+                <div class="about-badge-desc">Every rupee dedicated solely to public welfare</div>
+              </div>
+              <div class="about-badge-card vermilion-border">
+                <div class="about-badge-title">50 Years Seva Experience</div>
+                <div class="about-badge-desc">Continuous service legacy since 1974</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="founder-spotlight-media">
+            <div class="founder-banner-wrap" onclick="openDocModal('assets/leader_rk_tripathi.png')">
+              <img src="assets/leader_rk_tripathi.png" alt="Shri R. K. Tripathi Official Banner" class="founder-banner-img">
+              <div class="founder-banner-caption">
+                🔍 श्री आर. के. त्रिपाठी — संस्थापक, सिद्धि विनायक जनकल्याण ट्रस्ट (Click to Expand Poster)
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pillars of Leadership (Shri R. K. Tripathi) -->
+      <div style="text-align: center; margin-top: 36px; margin-bottom: 20px;">
+        <h3 style="font-size: 1.5rem; color: var(--navy-dark);" data-i18n="pillars_heading">Pillars of Leadership</h3>
+        <p style="color: var(--text-muted); font-size: 0.92rem;" data-i18n="pillars_subheading">Creating a lasting impact across media, grassroots governance, and ethical enterprise.</p>
+      </div>
+
+      <div class="founder-pillars-grid">
+        <!-- Pillar 1 -->
+        <div class="founder-pillar-card">
+          <div class="pillar-icon-badge">🎙️</div>
+          <h4 class="pillar-card-title" data-i18n="pillar1_title">1. A Credible & Fearless Voice in Media</h4>
+          <p class="pillar-card-desc" data-i18n="pillar1_desc">
+            As State Bureau Chief (Uttar Pradesh) for BST News 24, Shri Tripathi leads news operations with fearless, people-centric journalism. As National Vice President of Indian Journalist Protection Council (IJPC), he fights for the safety, dignity, and rights of journalists nationwide.
+          </p>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="founder-pillar-card">
+          <div class="pillar-icon-badge">🌾</div>
+          <h4 class="pillar-card-title" data-i18n="pillar2_title">2. Empowering Leadership at Grassroots</h4>
+          <p class="pillar-card-desc" data-i18n="pillar2_desc">
+            As District General Secretary, Akhil Bhartiya Pradhan Sangathan, Gorakhpur, he strengthens Panchayati Raj and village leadership. As Patron of Vyapar Mandal Khajni Vikas Manch, he champions economic upliftment of local traders, farmers, and rural youth.
+          </p>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="founder-pillar-card">
+          <div class="pillar-icon-badge">🛡️</div>
+          <h4 class="pillar-card-title" data-i18n="pillar3_title">3. Entrepreneurship with Integrity</h4>
+          <p class="pillar-card-desc" data-i18n="pillar3_desc">
+            As Director of Shakti Security Services, he built a disciplined, trust-based enterprise providing stable employment and security to hundreds of families while setting benchmarks in corporate governance and ethical business.
+          </p>
+        </div>
+      </div>
+
+      <!-- The Seva Yatra: A Legacy Since 1974 -->
+      <div class="seva-yatra-header">
+        <span class="leader-role-badge" data-i18n="yatra_badge">Historical Milestones</span>
+        <h3 style="font-size: 1.55rem; color: var(--navy-dark); margin-top: 8px;" data-i18n="yatra_title">THE SEVA YATRA: A Legacy Since 1974</h3>
+        <p style="color: var(--text-muted); font-size: 0.92rem; max-width: 720px; margin: 6px auto 0;" data-i18n="yatra_desc">
+          His true identity is not in his designations, but in his Seva. From early childhood public awakening to institutionalized humanitarian care.
+        </p>
+      </div>
+
+      <div class="seva-yatra-grid">
+        <div class="seva-milestone-card">
+          <span class="milestone-year-badge">1974</span>
+          <h4 class="milestone-title" data-i18n="yatra_m1_title">The Awakening Spark</h4>
+          <p class="milestone-desc" data-i18n="yatra_m1_desc">
+            Inspired by his father's humanitarian gatherings and spiritual discourses for public awakening during early childhood.
+          </p>
+        </div>
+
+        <div class="seva-milestone-card">
+          <span class="milestone-year-badge">2003</span>
+          <h4 class="milestone-title" data-i18n="yatra_m2_title">Manav Seva Sansthan</h4>
+          <p class="milestone-desc" data-i18n="yatra_m2_desc">
+            Institutionalized relief: Free Night Shelters (Rain Basera), Winter Blanket Drives, Free Pyaau Kiosks, and Free Medical Camps.
+          </p>
+        </div>
+
+        <div class="seva-milestone-card">
+          <span class="milestone-year-badge">2014</span>
+          <h4 class="milestone-title" data-i18n="yatra_m3_title">Youth Employment & Security</h4>
+          <p class="milestone-desc" data-i18n="yatra_m3_desc">
+            Establishment of Shakti Security Services, fostering discipline, employment, and safety for hundreds of youth.
+          </p>
+        </div>
+
+        <div class="seva-milestone-card" style="border-top-color: var(--vermilion);">
+          <span class="milestone-year-badge" style="background: var(--vermilion);">2024</span>
+          <h4 class="milestone-title" data-i18n="yatra_m4_title">Siddhi Vinayak Trust</h4>
+          <p class="milestone-desc" data-i18n="yatra_m4_desc">
+            Culmination of 50 years of seva into a sacred, structured trust dedicated to education, healthcare, and social harmony.
+          </p>
+        </div>
+      </div>
+
+      <!-- Trust Sacred Pledge & 4 Core Objectives -->
+      <div style="background: #FFF; border-radius: var(--radius-lg); padding: 32px 26px; border: 1.5px solid var(--border-gold); box-shadow: var(--shadow-md); margin-top: 10px;">
+        <div style="text-align: center; margin-bottom: 20px;">
+          <h4 style="font-family: 'Rozha One', 'Noto Sans Devanagari', serif; font-size: 1.4rem; color: var(--navy-dark);" data-i18n="pledge_title">
+            SIDDHI VINAYAK JANKALYAN TRUST: Our Sacred Pledge
+          </h4>
+          <p style="color: var(--text-muted); font-size: 0.92rem; max-width: 800px; margin: 4px auto 0;" data-i18n="pledge_vision">
+            <em>"To create a self-reliant, harmonious and equitable society where every individual has access to peace, education, health, and dignity, and where no one is left hungry, uneducated, or helpless."</em>
+          </p>
+        </div>
+
+        <div class="trust-objectives-grid">
+          <div class="trust-objective-item">
+            <div class="objective-num-icon">1</div>
+            <h5 class="objective-item-title" data-i18n="obj1_title">SEVA (Service)</h5>
+            <p class="objective-item-desc" data-i18n="obj1_desc">Ensuring fundamental rights — food, quality education, primary healthcare, and shelter for the most marginalized.</p>
+          </div>
+
+          <div class="trust-objective-item">
+            <div class="objective-num-icon">2</div>
+            <h5 class="objective-item-title" data-i18n="obj2_title">SASHAKTIKARAN</h5>
+            <p class="objective-item-desc" data-i18n="obj2_desc">Vocational and technical training for educated unemployed youth, making them self-reliant and job-ready.</p>
+          </div>
+
+          <div class="trust-objective-item">
+            <div class="objective-num-icon">3</div>
+            <h5 class="objective-item-title" data-i18n="obj3_title">SADBHAV (Harmony)</h5>
+            <p class="objective-item-desc" data-i18n="obj3_desc">Dismantling caste and communal barriers under the sacred principle of Vasudhaiva Kutumbakam — The World is One Family.</p>
+          </div>
+
+          <div class="trust-objective-item">
+            <div class="objective-num-icon">4</div>
+            <h5 class="objective-item-title" data-i18n="obj4_title">PRATIBHA PROTSAHAN</h5>
+            <p class="objective-item-desc" data-i18n="obj4_desc">Mentoring and financially supporting meritorious underprivileged students for premier higher education in India and abroad.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LEADERSHIP & OFFICE BEARERS ================= -->
+  <!-- EXACT ORDER SPECIFIED: 1- अध्यक्ष, 2- उपाध्यक्ष, 3- कोषाध्यक्ष, 4- महासचिव -->
+  <section class="section" id="leadership" style="background-color: var(--bg-sand);">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-subtitle-tag" data-i18n="leader_badge">Guiding Light & Office Bearers</span>
+        <h2 class="section-title" data-i18n="leader_title">Our Leadership & Office Bearers</h2>
+        <p class="section-desc" data-i18n="leader_desc">Selfless visionaries dedicating their life to community empowerment, transparency, and social welfare.</p>
+        <div class="gold-divider"></div>
+      </div>
+
+      <div class="leadership-grid">
+        <!-- ================= 1. अध्यक्ष (PRESIDENT) ================= -->
+        <article class="leader-card" id="leader-rk-tripathi">
+          <div>
+            <div class="leader-card-badge-row">
+              <span class="leader-seq-pill">
+                <span class="seq-num">1</span>
+                <span data-i18n="role_pres_badge">अध्यक्ष (President & Founder)</span>
+              </span>
+              <span class="leader-exp-pill">⭐ 50+ Years Seva (Since 1974)</span>
+            </div>
+
+            <div class="leader-profile-row">
+              <div class="leader-avatar-frame" onclick="openLeaderBioModal('rk_tripathi')" title="Click to view full profile">
+                <img src="assets/leader_rk_tripathi_avatar.png" alt="Shri R. K. Tripathi" class="leader-avatar-img">
+                <span class="leader-avatar-zoom-icon" aria-hidden="true">🔍</span>
+              </div>
+              <div class="leader-title-block">
+                <h3 class="leader-name-hi">श्री आर. के. त्रिपाठी</h3>
+                <div class="leader-name-en">Shri R. K. Tripathi</div>
+                <div class="leader-role-text" data-i18n="role_pres_sub">संस्थापक, अध्यक्ष एवं मुख्य न्यासी (Founder & Chief Trustee)</div>
+              </div>
+            </div>
+
+            <div class="leader-chips-row">
+              <span class="leader-chip gold-chip">🎙️ BST News 24 State Bureau Chief (UP)</span>
+              <span class="leader-chip">⚖️ National VP - IJPC</span>
+              <span class="leader-chip">🌾 Dist. GS - Pradhan Sangathan Gorakhpur</span>
+              <span class="leader-chip">🏢 Patron - Vyapar Mandal Khajni</span>
+              <span class="leader-chip">🛡️ Director - Shakti Security</span>
+            </div>
+
+            <div class="leader-quote-box">
+              <div class="leader-quote-text" data-i18n="rk_mantra">
+                "सेवा ही संकल्प, विकास ही लक्ष्य • True success is only meaningful when it reaches the last person in the line."
+              </div>
+              <span class="leader-quote-author">— Shri R. K. Tripathi</span>
+            </div>
+
+            <p class="leader-bio-summary" data-i18n="rk_bio_summary">
+              Shri R. K. Tripathi represents a rare confluence of visionary leadership, fearless journalism, ethical entrepreneurship, and selfless social service. Over five decades of service, from early childhood in 1974 to founding Manav Seva Sansthan (2003) and Siddhi Vinayak Jankalyan Trust, he has created lasting humanitarian impact across Uttar Pradesh.
+            </p>
+
+            <ul class="leader-highlights-list">
+              <li class="leader-highlight-item">
+                <span class="bullet-symbol">❖</span>
+                <span><strong>Fearless Media Voice:</strong> Defending freedom of speech, journalist welfare, and people-centric issues.</span>
+              </li>
+              <li class="leader-highlight-item">
+                <span class="bullet-symbol">❖</span>
+                <span><strong>Grassroots Governance:</strong> Strengthening Panchayati Raj institutions, local farmers, traders, and youth.</span>
+              </li>
+              <li class="leader-highlight-item">
+                <span class="bullet-symbol">❖</span>
+                <span><strong>Lifelong Humanitarian Interventions:</strong> Rain Basera night shelters, winter blanket distribution, and free health camps.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="leader-contact-box">
+              <div class="leader-contact-row">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
+                <span>Mobile: <a href="tel:+917390050061">+91 7390050061</a> | <a href="tel:+919214873534">+91 9214873534</a></span>
+              </div>
+              <div class="leader-contact-row">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                <span>Email: <a href="mailto:info@siddhivinayaktrust.org">info@siddhivinayaktrust.org</a></span>
+              </div>
+            </div>
+
+            <div class="leader-actions-row">
+              <button type="button" class="btn-leader-bio" onclick="openLeaderBioModal('rk_tripathi')">
+                <span>📖 विस्तृत जीवन परिचय व सेवा यात्रा</span>
+              </button>
+              <button type="button" class="btn-leader-poster-trigger" onclick="openDocModal('assets/leader_rk_tripathi.png')" title="View Official Poster">
+                <span>🖼️ Poster</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ================= 2. उपाध्यक्ष (VICE PRESIDENT) ================= -->
+        <article class="leader-card" id="leader-malti-tripathi">
+          <div>
+            <div class="leader-card-badge-row">
+              <span class="leader-seq-pill">
+                <span class="seq-num">2</span>
+                <span data-i18n="role_vp_badge">उपाध्यक्ष (Vice President)</span>
+              </span>
+              <span class="leader-exp-pill">🌸 35+ Years Grassroots Seva</span>
+            </div>
+
+            <div class="leader-profile-row">
+              <div class="leader-avatar-frame" onclick="openLeaderBioModal('malti_tripathi')" title="Click to view full profile">
+                <img src="assets/leader_malti_tripathi_avatar.jpg?v=3" alt="Mrs. Malti Tripathi" class="leader-avatar-img">
+                <span class="leader-avatar-zoom-icon" aria-hidden="true">🔍</span>
+              </div>
+              <div class="leader-title-block">
+                <h3 class="leader-name-hi">श्रीमती मालती त्रिपाठी</h3>
+                <div class="leader-name-en">Mrs. Malti Tripathi</div>
+                <div class="leader-role-text" data-i18n="role_vp_sub">उपाध्यक्ष (Vice President) | संस्थापक - मानव सेवा संस्थान</div>
+              </div>
+            </div>
+
+            <div class="leader-chips-row">
+              <span class="leader-chip gold-chip">🏛️ Founder - Manav Sewa Sansthan</span>
+              <span class="leader-chip">⚖️ Social Reformer</span>
+              <span class="leader-chip">🤝 Jail Inmate Family Support</span>
+              <span class="leader-chip">👩‍👧 Women Rights & Literacy</span>
+              <span class="leader-chip">🌱 Rural Empowerment</span>
+            </div>
+
+            <div class="leader-quote-box">
+              <div class="leader-quote-text" data-i18n="malti_mantra">
+                "Service is not just a duty; it is a lifetime commitment. We strive to build a future where every individual is empowered and every voice is heard."
+              </div>
+              <span class="leader-quote-author">— Mrs. Malti Tripathi, Vice President</span>
+            </div>
+
+            <p class="leader-bio-summary" data-i18n="malti_bio_summary">
+              A dedicated social reformer with over three decades of grassroots experience, Mrs. Malti Tripathi has spent more than thirty-five years uplifting the marginalized and giving voice to the voiceless. The driving force behind Manav Sewa Sansthan, she focuses on rehabilitating families of jail inmates, women's legal rights, girls' education, and vocational independence.
+            </p>
+
+            <ul class="leader-highlights-list">
+              <li class="leader-highlight-item">
+                <span class="bullet-symbol">❖</span>
+                <span><strong>Prisoner & Family Rehabilitation:</strong> Providing dignity and rehabilitation opportunities to forgotten jail inmates and their kin.</span>
+              </li>
+              <li class="leader-highlight-item">
+                <span class="bullet-symbol">❖</span>
+                <span><strong>Women's Legal & Educational Awareness:</strong> Empowering rural women through legal literacy, skill-building, and self-reliance.</span>
+              </li>
+              <li class="leader-highlight-item">
+                <span class="bullet-symbol">❖</span>
+                <span><strong>Lifetime Social Justice Commitment:</strong> Spearheading compassionate ground-level initiatives across Purvanchal.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="leader-contact-box">
+              <div class="leader-contact-row">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
+                <span>Mobile: <a href="tel:+917451952337">+91 7451952337</a></span>
+              </div>
+              <div class="leader-contact-row">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                <span>Email: <a href="mailto:info@siddhivinayakjakalyantrust.org">info@siddhivinayakjakalyantrust.org</a></span>
+              </div>
+            </div>
+
+            <div class="leader-actions-row">
+              <button type="button" class="btn-leader-bio" onclick="openLeaderBioModal('malti_tripathi')">
+                <span>📖 विस्तृत जीवन परिचय व सेवा यात्रा</span>
+              </button>
+              <button type="button" class="btn-leader-poster-trigger" onclick="openDocModal('assets/leader_malti_tripathi.jpg')" title="View Portrait">
+                <span>🖼️ Photo</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ================= 3. कोषाध्यक्ष (TREASURER) ================= -->
+        <article class="leader-card" id="leader-rahul-tripathi">
+          <div>
+            <div class="leader-card-badge-row">
+              <span class="leader-seq-pill">
+                <span class="seq-num">3</span>
+                <span data-i18n="role_treasurer_badge">कोषाध्यक्ष (Treasurer)</span>
+              </span>
+              <span class="leader-exp-pill">🛡️ 12 Years Leadership (Since 2014)</span>
+            </div>
+
+            <div class="leader-profile-row">
+              <div class="leader-avatar-frame" onclick="openLeaderBioModal('rahul_tripathi')" title="Click to view full profile">
+                <img src="assets/leader_rahul_tripathi_avatar.png" alt="Mr. Rahul Tripathi" class="leader-avatar-img">
+                <span class="leader-avatar-zoom-icon" aria-hidden="true">🔍</span>
+              </div>
+              <div class="leader-title-block">
+                <h3 class="leader-name-hi">श्री राहुल त्रिपाठी</h3>
+                <div class="leader-name-en">Mr. Rahul Tripathi</div>
+                <div class="leader-role-text" data-i18n="role_treasurer_sub">कोषाध्यक्ष (Treasurer) | प्रबंध निदेशक (MD) - शक्ति सिक्योरिटी सर्विसेज</div>
+              </div>
+            </div>
+
+            <div class="leader-chips-row">
+              <span class="leader-chip gold-chip">🛡️ Managing Director - Shakti Security</span>
+              <span class="leader-chip">💎 Financial Transparency & Integrity</span>
+              <span class="leader-chip">⚡ Yuva - Nirbhay - Samarpit</span>
+              <span class="leader-chip">👥 Youth Employment Mentor</span>
+              <span class="leader-chip">📜 Since 2014 Benchmark</span>
+            </div>
+
+            <div class="leader-quote-box">
+              <div class="leader-quote-text" data-i18n="rahul_mantra">
+                "युवा सोच, पारदर्शी कार्य - सेवा ही लक्ष्य • Seva - Nishtha - Pardarshita • युवा - निर्भय - समर्पित"
+              </div>
+              <span class="leader-quote-author">— Mr. Rahul Tripathi, Treasurer & MD</span>
+            </div>
+
+            <p class="leader-bio-summary" data-i18n="rahul_bio_summary">
+              Mr. Rahul Tripathi is a young, fearless and dedicated personality discharging the crucial responsibility of Treasurer at Siddhivinayak Jan Kalyan Trust with absolute transparency and integrity. As Managing Director of Shakti Security Services since 2014, he has built a trusted team of hundreds of trained security personnel while empowering rural youth with discipline, stable employment, and values.
+            </p>
+
+            <ul class="leader-highlights-list">
+              <li class="leader-highlight-item">
+                <span class="bullet-symbol">❖</span>
+                <span><strong>Trust Mantras:</strong> Seva - Nishtha - Pardarshita (Service - Dedication - Transparency).</span>
+              </li>
+              <li class="leader-highlight-item">
+                <span class="bullet-symbol">❖</span>
+                <span><strong>Enterprise Mantras:</strong> Seva - Suraksha - Samarpan (Service - Security - Dedication).</span>
+              </li>
+              <li class="leader-highlight-item">
+                <span class="bullet-symbol">❖</span>
+                <span><strong>Core Principle:</strong> "Social Service is the Supreme Duty" & "Service to Humanity is Service to God".</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="leader-contact-box">
+              <div class="leader-contact-row">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
+                <span>Mobile: <a href="tel:+917390050061">+91 7390050061</a></span>
+              </div>
+              <div class="leader-contact-row">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                <span>Email: <a href="mailto:info@siddhivinayaktrust.org">info@siddhivinayaktrust.org</a></span>
+              </div>
+            </div>
+
+            <div class="leader-actions-row">
+              <button type="button" class="btn-leader-bio" onclick="openLeaderBioModal('rahul_tripathi')">
+                <span>📖 विस्तृत जीवन परिचय व सेवा यात्रा</span>
+              </button>
+              <button type="button" class="btn-leader-poster-trigger" onclick="openDocModal('assets/leader_rahul_tripathi.png')" title="View Official Poster">
+                <span>🖼️ Poster</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ================= 4. महासचिव (GENERAL SECRETARY) ================= -->
+        <article class="leader-card" id="leader-santosh-tripathi">
+          <div>
+            <div class="leader-card-badge-row">
+              <span class="leader-seq-pill">
+                <span class="seq-num">4</span>
+                <span data-i18n="role_sec_badge">महासचिव (General Secretary)</span>
+              </span>
+              <span class="leader-exp-pill">🕉️ 32 Years Nishwarth Seva</span>
+            </div>
+
+            <div class="leader-profile-row">
+              <div class="leader-avatar-frame" onclick="openLeaderBioModal('santosh_tripathi')" title="Click to view full profile">
+                <img src="assets/leader_santosh_tripathi_avatar.jpg?v=2" alt="Shri Santosh Kumar Tripathi" class="leader-avatar-img">
+                <span class="leader-avatar-zoom-icon" aria-hidden="true">🔍</span>
+              </div>
+              <div class="leader-title-block">
+                <h3 class="leader-name-hi">श्री संतोष कुमार त्रिपाठी</h3>
+                <div class="leader-name-en">Shri Santosh Kumar Tripathi</div>
+                <div class="leader-role-text" data-i18n="role_sec_sub">महासचिव (Mahasachiv), सिद्धि विनायक जन कल्याण ट्रस्ट (पंजीकृत)</div>
+              </div>
+            </div>
+
+            <div class="leader-chips-row">
+              <span class="leader-chip gold-chip">🇮🇳 Pan-India Operations (Gorakhpur & Agra)</span>
+              <span class="leader-chip">🎙️ District GS - Gorakhpur (Media)</span>
+              <span class="leader-chip">🕉️ Sanatan Values & Cultural Unity</span>
+              <span class="leader-chip">🪙 Tan Man Dhan Se Seva (यथासंभव दान)</span>
+              <span class="leader-chip">🙏 Seva Hi Pooja Hai</span>
+            </div>
+
+            <div class="leader-quote-box">
+              <div class="leader-quote-text" data-i18n="santosh_mantra">
+                "सेवा ही पूजा है • तन, मन एवं धन से सेवा • 32 Years of Tapasya, Family Values and a Pledge to Serve Across India"
+              </div>
+              <span class="leader-quote-author">— Shri Santosh Kumar Tripathi, Mahasachiv</span>
+            </div>
+
+            <p class="leader-bio-summary" data-i18n="santosh_bio_summary">
+              Shri Santosh Kumar Tripathi represents a glorious family legacy where social service is inherited as a sacred tradition. With 32 years of continuous public service, protection of Sanatan values, and fearless unbiased reporting as District General Secretary (Media) Gorakhpur, he steers national operations across India from Gorakhpur and Agra.
+            </p>
+
+            <ul class="leader-highlights-list">
+              <li class="leader-highlight-item">
+                <span class="bullet-symbol">❖</span>
+                <span><strong>Pan-India Welfare:</strong> Directing nationwide education, healthcare, and women empowerment initiatives.</span>
+              </li>
+              <li class="leader-highlight-item">
+                <span class="bullet-symbol">❖</span>
+                <span><strong>Direct Financial Aid (यथासंभव दान):</strong> Personal financial contribution for marriages of poor girls and medical treatment.</span>
+              </li>
+              <li class="leader-highlight-item">
+                <span class="bullet-symbol">❖</span>
+                <span><strong>32 Years of Tapasya:</strong> Preserving Sanatan cultural roots, social harmony, and fearless journalism.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="leader-contact-box">
+              <div class="leader-contact-row">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
+                <span>Mobile: <a href="tel:+918858588838">+91 8858588838</a></span>
+              </div>
+              <div class="leader-contact-row">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                <span>Email: <a href="mailto:info@siddhivinayaktrust.org">info@siddhivinayaktrust.org</a></span>
+              </div>
+            </div>
+
+            <div class="leader-actions-row">
+              <button type="button" class="btn-leader-bio" onclick="openLeaderBioModal('santosh_tripathi')">
+                <span>📖 विस्तृत जीवन परिचय व सेवा यात्रा</span>
+              </button>
+              <button type="button" class="btn-leader-poster-trigger" onclick="openDocModal('assets/leader_santosh_tripathi.jpg')" title="View Official Poster">
+                <span>🖼️ Poster</span>
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TRANSPARENCY & OFFICIAL LETTERHEADS ================= -->
+  <section class="section" id="transparency">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-subtitle-tag" data-i18n="transparency_badge">Verified Non-Profit Status</span>
+        <h2 class="section-title" data-i18n="transparency_title">Official Registration & Legal Charters</h2>
+        <p class="section-desc" data-i18n="transparency_desc">Inspect our official legal documents, registration certificates, and institutional credentials below.</p>
+        <div class="gold-divider"></div>
+      </div>
+
+      <div class="transparency-wrap">
+        <div class="transparency-badges-row">
+          <div class="trust-badge-pill transparency-pill">
+            <span>🏛️ Registered Office: Tarkulwa, Deoria, Gorakhpur, UP</span>
+          </div>
+          <div class="trust-badge-pill transparency-pill">
+            <span>🏢 Mukhyalaya: Rudrapur Khajni, Gorakhpur - 273212</span>
+          </div>
+          <div class="trust-badge-pill transparency-pill">
+            <span>🏢 Upmukhyalaya: Sainik Nagar, Agra - 282001</span>
+          </div>
+        </div>
+
+        <div class="letterhead-showcase">
+          <!-- Letterhead 1: English Edition -->
+          <div class="letterhead-preview-card">
+            <img src="assets/official_letterhead_en.png" alt="Official English Letterhead with Lord Ganesha Emblem" class="letterhead-img" onclick="openDocModal('assets/official_letterhead_en.png')">
+            <div class="letterhead-caption">Official Trust Charter & Letterhead (English)</div>
+            <button type="button" class="btn-view-doc" onclick="openDocModal('assets/official_letterhead_en.png')">🔍 View Full Document</button>
+          </div>
+
+          <!-- Letterhead 2: Hindi/Bilingual Edition -->
+          <div class="letterhead-preview-card">
+            <img src="assets/official_letterhead_hi.jpg" alt="Official Hindi Letterhead with Rudrapur Khajni & Agra details" class="letterhead-img" onclick="openDocModal('assets/official_letterhead_hi.jpg')">
+            <div class="letterhead-caption">आधिकारिक ट्रस्ट लेटरहेड व पत्रांक (हिन्दी) — VI42</div>
+            <button type="button" class="btn-view-doc" onclick="openDocModal('assets/official_letterhead_hi.jpg')">🔍 View Full Document</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= VOLUNTEER & COMMUNITY INQUIRY ================= -->
+  <section class="section" id="contact" style="background-color: var(--bg-sand);">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-subtitle-tag" data-i18n="contact_badge">Get In Touch</span>
+        <h2 class="section-title" data-i18n="contact_title">Join Us as a Sevadar (Volunteer) or Reach Out</h2>
+        <p class="section-desc" data-i18n="contact_desc">Whether you wish to volunteer time, donate supplies, or request assistance in your village, our doors are always open.</p>
+        <div class="gold-divider"></div>
+      </div>
+
+      <div class="volunteer-container">
+        <div class="volunteer-info">
+          <h3 data-i18n="office_details_title">Trust Headquarters & Offices</h3>
+          <p data-i18n="office_details_desc">Feel free to visit our centers or connect directly with our office bearers.</p>
+
+          <div class="office-info-box">
+            <div class="office-info-title">📍 Registered Office (पंजीकृत कार्यालय)</div>
+            <div class="office-info-text">Tarkulwa, Deoria, Gorakhpur, Uttar Pradesh</div>
+          </div>
+
+          <div class="office-info-box">
+            <div class="office-info-title">🏢 Mukhyalaya / Head Office (मुख्यालय)</div>
+            <div class="office-info-text">रुद्रपुर खजनी, गोरखपुर, उत्तर प्रदेश - 273212<br>Rudrapur Khajni, Gorakhpur - 273212, UP</div>
+          </div>
+
+          <div class="office-info-box">
+            <div class="office-info-title">🏢 Upmukhyalaya / Sub-Office (उप मुख्यालय)</div>
+            <div class="office-info-text">31 B.N. 41, बद्रीनाथ कॉलोनी, फेस 02, सैनिक नगर, राजपुर चुंगी / ओखला रोड, आगरा - 282001<br>31 B.N. 41, Badrinath Colony, Phase 02, Sainik Nagar, Agra - 282001, UP</div>
+          </div>
+
+          <div style="margin-top: 20px; font-size: 0.9rem;">
+            📞 <strong>Helpline:</strong> <a href="tel:+917390050061" style="color: var(--navy-royal); font-weight: 700;">+91 7390050061</a> / <a href="tel:+919214873534" style="color: var(--navy-royal); font-weight: 700;">9214873534</a><br>
+            ✉️ <strong>Email:</strong> <a href="mailto:info@siddhivinayaktrust.org" style="color: var(--navy-royal); font-weight: 700;">info@siddhivinayaktrust.org</a>
+          </div>
+        </div>
+
+        <form class="volunteer-form" id="contact-form" onsubmit="handleContactSubmit(event)">
+          <div class="form-group-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+            <span data-i18n="send_msg_title">Send Us a Message / Seva Request</span>
+          </div>
+
+          <div class="input-field-wrap" style="margin-bottom: 14px;">
+            <label class="input-label" for="msg-name">Your Full Name *</label>
+            <input type="text" id="msg-name" class="text-input" placeholder="e.g. Anand Sharma" required>
+          </div>
+
+          <div class="donor-inputs-grid" style="margin-bottom: 14px;">
+            <div class="input-field-wrap">
+              <label class="input-label" for="msg-phone">Contact Number *</label>
+              <input type="tel" id="msg-phone" class="text-input" placeholder="e.g. 9876543210" required>
+            </div>
+            <div class="input-field-wrap">
+              <label class="input-label" for="msg-type">Purpose</label>
+              <select id="msg-type" class="text-input" style="background:#FFF;">
+                <option value="Volunteer">Join as Volunteer / Sevadar</option>
+                <option value="Donation Query">Donation & 12A / 80G Receipt Query</option>
+                <option value="Request Aid">Request Medical or Educational Aid</option>
+                <option value="General Inquiry">General Trust Inquiry</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="input-field-wrap" style="margin-bottom: 20px;">
+            <label class="input-label" for="msg-text">Your Message / Village Details *</label>
+            <textarea id="msg-text" class="text-input" rows="4" placeholder="Please write how you would like to help or the nature of assistance needed..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn-proceed-donation" style="background: var(--navy-royal);">
+            <span>Submit Message / सन्देश भेजें</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SIGNATURE BLUE FOOTER BAR (EXACT SPECIFICATION FROM PROMPT & LETTERHEAD)
+       "Footer पट्टी: नीचे नीली पट्टी में सब कुछ -"
+       ========================================================================== -->
+  <footer class="official-blue-footer">
+    <div class="blue-footer-container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Leadership & Trust Identity -->
+        <div class="footer-col">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+            <img src="assets/ganesha_seal.png" alt="Trust Logo" style="width: 48px; height: 48px; border-radius: 50%; border: 2px solid var(--gold-primary); background: #FFF;">
+            <div>
+              <div style="font-family: 'Rozha One', serif; font-size: 1.05rem; color: var(--gold-light);">सिद्धि विनायक जन कल्याण ट्रस्ट</div>
+              <div style="font-family: 'Cinzel', serif; font-size: 0.85rem; font-weight: 700;">SIDDHI VINAYAK JAN KALYAN TRUST</div>
+            </div>
+          </div>
+
+          <ul class="footer-list">
+            <li><strong>1. अध्यक्ष (PRESIDENT):</strong> SHRI R. K. TRIPATHI (<a href="tel:+917390050061">+91 7390050061</a> | <a href="tel:+919214873534">9214873534</a>)</li>
+            <li><strong>2. उपाध्यक्ष (VICE PRESIDENT):</strong> MRS. MALTI TRIPATHI (<a href="tel:+917451952337">+91 7451952337</a>)</li>
+            <li><strong>3. कोषाध्यक्ष (TREASURER):</strong> MR. RAHUL TRIPATHI (MD - Shakti Security)</li>
+            <li><strong>4. महासचिव (GENERAL SECRETARY):</strong> SHRI SANTOSH KUMAR TRIPATHI (<a href="tel:+918858588838">+91 8858588838</a>)</li>
+            <li><strong>EMAIL:</strong> <a href="mailto:info@siddhivinayaktrust.org">info@siddhivinayaktrust.org</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 2: Registered Office & Mukhyalayas -->
+        <div class="footer-col">
+          <h4>OFFICIAL OFFICES & BRANCHES</h4>
+          <ul class="footer-list">
+            <li>
+              <strong>REGISTERED OFFICE:</strong><br>
+              Tarkulwa, Deoria, Gorakhpur, UP
+            </li>
+            <li>
+              <strong>मुख्‍यालय (MUKHYALAYA):</strong><br>
+              रुद्रपुर खजनी, गोरखपुर, उत्तर प्रदेश - 273212<br>
+              (Rudrapur Khajni, Gorakhpur - 273212)
+            </li>
+            <li>
+              <strong>उपमुख्‍यालय (UPMUKHYAALAYA):</strong><br>
+              31 B.N. 41, बद्रीनाथ कॉलोनी, फेस 02, सैनिक नगर, राजपुर चुंगी / ओखला रोड, आगरा - 282001<br>
+              (31 B.N. 41, Badrinath Colony, Phase 02, Sainik Nagar, Rajpur Chungi, Agra - 282001)
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Registration, Tax & Direct Navigation -->
+        <div class="footer-col">
+          <h4>REGISTRATION & LINKS</h4>
+          <ul class="footer-list">
+            <li><strong>GOVT. REG NO:</strong> <span style="color:var(--gold-light);">SVJKT/2026/VI42</span></li>
+            <li><strong>पंजीकरण संख्या:</strong> <span style="color:var(--gold-light);">VI42</span></li>
+            <li><strong>WEBSITE:</strong> <a href="https://www.siddhivinayaktrust.org" target="_blank">www.siddhivinayaktrust.org</a></li>
+            <li style="margin-top: 14px;">
+              <a href="#home">Home</a> • <a href="#about">About</a> • <a href="#causes">Causes</a> • <a href="#donate">Donate</a> • <a href="#leadership">Leadership</a> • <a href="#transparency">Charters</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- THE EXACT BLUE FOOTER STRIP AS SPECIFIED IN USER IMAGE 1 & 2 -->
+      <div class="footer-exact-blue-strip">
+        <div class="exact-strip-col">
+          <div class="strip-item-line">
+            <span class="strip-highlight">REGISTERED OFFICE:</span> Tarkulwa, Deoria, Gorakhpur, UP &nbsp;|&nbsp;
+            <span class="strip-highlight">PHONE:</span> <a href="tel:+917390050061" class="strip-phone-highlight">+91 7390050061</a> &nbsp;|&nbsp;
+            <span class="strip-highlight">EMAIL:</span> <a href="mailto:info@siddhivinayaktrust.org" class="strip-phone-highlight">info@siddhivinayaktrust.org</a>
+          </div>
+          <div class="strip-item-line">
+            <span class="strip-highlight">1. अध्यक्ष:</span> SHRI R. K. TRIPATHI &nbsp;|&nbsp;
+            <span class="strip-highlight">2. उपाध्यक्ष:</span> MRS. MALTI TRIPATHI &nbsp;|&nbsp;
+            <span class="strip-highlight">3. कोषाध्यक्ष:</span> MR. RAHUL TRIPATHI &nbsp;|&nbsp;
+            <span class="strip-highlight">4. महासचिव:</span> SHRI SANTOSH KUMAR TRIPATHI
+          </div>
+        </div>
+
+        <div class="exact-strip-col exact-strip-right">
+          <div class="strip-item-line">
+            <span class="strip-highlight">REG NO:</span> SVJKT/2026/VI42 &nbsp;|&nbsp;
+            <span class="strip-highlight">पंजीकरण संख्या:</span> VI42 &nbsp;|&nbsp;
+            <a href="https://www.siddhivinayaktrust.org" class="strip-phone-highlight">www.siddhivinayaktrust.org</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-copy">
+        <div>© 2024–2026 Siddhi Vinayak Jan Kalyan Trust. All Rights Reserved. Dedicated to Public Welfare.</div>
+        <div>Committed to Community Welfare • Education • Healthcare • Livelihood • Empowerment</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL 1: INTERACTIVE DONATION POPUP
+       ========================================================================== -->
+  <dialog class="custom-modal" id="donate-modal" aria-labelledby="modal-donate-title">
+    <div class="modal-header">
+      <h3 id="modal-donate-title">🌸 Seva & Donation — Siddhi Vinayak Trust</h3>
+      <button type="button" class="modal-close-btn" onclick="closeDonateModal()" aria-label="Close dialog">✕</button>
+    </div>
+    <div class="modal-body">
+      <div style="text-align: center; margin-bottom: 20px;">
+        <img src="assets/ganesha_seal.png" alt="Emblem" style="width: 70px; height: 70px; border-radius: 50%;">
+        <h4 style="color: var(--navy-dark); font-size: 1.2rem; margin-top: 8px;">Scan & Donate with Any UPI App</h4>
+        <p style="font-size: 0.88rem; color: var(--text-muted);">Amount: <strong id="modal-amount-display" style="color: var(--navy-royal); font-size: 1.1rem;">₹1,100</strong> for <span id="modal-cause-display">General Welfare</span></p>
+      </div>
+
+      <div class="qr-card modal-qr-card">
+        <a id="modal-upi-intent-btn" href="#" class="btn-upi-mobile-pay" target="_blank" rel="noopener">
+          <span>📱 Pay Directly via Any UPI App (GPay / PhonePe / Paytm / BHIM)</span>
+        </a>
+
+        <div class="qr-code-box modal-qr-box">
+          <img id="modal-qr-img" src="" alt="UPI QR Code" class="qr-code-img">
+        </div>
+        <div class="qr-upi-id" onclick="copyUpiId()" title="Click to copy UPI ID">
+          <span id="modal-upi-id-text">shantanu.s08@ptaxis.com</span> 📋 (Click to Copy)
+        </div>
+        <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 6px;">
+          Scan with GPay, PhonePe, Paytm, BHIM, Amazon Pay or any bank UPI
+        </div>
+      </div>
+
+      <!-- Live Auto-Verification & Countdown Progress -->
+      <div class="payment-auto-status">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 8px;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span class="live-pulse-dot"></span>
+            <span id="payment-status-text" style="font-size: 0.86rem; font-weight: 700; color: var(--navy-royal);">
+              Listening for UPI Payment... Generating receipt automatically:
+            </span>
+          </div>
+          <span id="pay-timer-num" style="background: var(--navy-royal); color: var(--gold-light); font-weight: 800; font-size: 0.82rem; padding: 3px 10px; border-radius: 12px;">15s</span>
+        </div>
+        <div style="width: 100%; height: 6px; background: #E2E8F0; border-radius: 999px; overflow: hidden;">
+          <div id="pay-progress-bar" style="width: 100%; height: 100%; background: linear-gradient(90deg, var(--gold-primary), #22C55E); transition: width 1s linear;"></div>
+        </div>
+        <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 6px; text-align: center;">
+          ⚡ Verified instant 12A & 80G receipt will show immediately upon payment.
+        </div>
+      </div>
+
+      <div style="margin-bottom: 16px; text-align: left;">
+        <label for="donor-utr-input" style="font-size: 0.82rem; font-weight: 700; color: var(--navy-royal); display: block; margin-bottom: 4px;">
+          Optional: Enter 12-Digit UPI Ref / UTR No. (from your payment app):
+        </label>
+        <input type="text" id="donor-utr-input" class="text-input" placeholder="e.g. 429381029482 (or auto-generated if blank)" maxlength="24" style="width: 100%; font-family: monospace; font-size: 0.95rem;">
+      </div>
+
+      <div style="background: var(--bg-sand); padding: 14px; border-radius: var(--radius-md); font-size: 0.86rem; margin-bottom: 20px;">
+        <strong>Direct Bank Transfer / NEFT / RTGS:</strong><br>
+        Account Name: Siddhi Vinayak Jan Kalyan Trust<br>
+        Account No: 50200084729103 | IFSC: HDFC0001824 | HDFC Bank, Gorakhpur
+      </div>
+
+      <button type="button" class="btn-proceed-donation" onclick="completePaymentAndShowReceipt()" style="background: var(--emerald);">
+        <span>✅ I Have Completed Payment — Show Receipt Now</span>
+      </button>
+    </div>
+  </dialog>
+
+  <!-- ==========================================================================
+       MODAL 2: OFFICIAL 12A & 80G DONATION RECEIPT SLIP (PRINTABLE)
+       ========================================================================== -->
+  <dialog class="custom-modal" id="receipt-modal" aria-labelledby="receipt-modal-title">
+    <div class="modal-header">
+      <h3 id="receipt-modal-title">📄 Official Donation Acknowledgement Slip</h3>
+      <button type="button" class="modal-close-btn" onclick="closeReceiptModal()" aria-label="Close dialog">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="receipt-certificate" id="printable-receipt">
+        <div class="receipt-header">
+          <img src="assets/ganesha_seal.png" alt="Emblem" class="receipt-logo">
+          <div class="receipt-trust-hi">सिद्धि विनायक जन कल्याण ट्रस्ट</div>
+          <div class="receipt-trust-title">SIDDHI VINAYAK JAN KALYAN TRUST</div>
+          <div class="receipt-meta-line">
+            Govt. Reg No: <strong>SVJKT/2026/VI42</strong> • Panjikaran: <strong>VI42</strong> • Non-Profit Public Trust
+          </div>
+          <div class="receipt-meta-line">
+            Registered Office: Tarkulwa, Deoria, Gorakhpur, UP | Mukhyalaya: Rudrapur Khajni, Gorakhpur - 273212
+          </div>
+        </div>
+
+        <div class="receipt-number-row">
+          <span>Receipt No: <strong id="receipt-id">SVJKT-2026-0489</strong></span>
+          <span>Date & Time: <strong id="receipt-date">20-Oct-2026, 12:15 AM</strong></span>
+        </div>
+
+        <div class="receipt-table-wrapper">
+          <table class="receipt-table">
+            <tr>
+              <th>Donor Name:</th>
+              <td id="receipt-donor-name">Ramesh Chandra</td>
+            </tr>
+            <tr>
+              <th>Mobile Number:</th>
+              <td id="receipt-donor-phone">+91 9876543210</td>
+            </tr>
+            <tr>
+              <th>Email Address:</th>
+              <td id="receipt-donor-email">donor@example.com</td>
+            </tr>
+            <tr>
+              <th>PAN (For 12A & 80G Benefit):</th>
+              <td id="receipt-donor-pan">ABCDE1234F</td>
+            </tr>
+            <tr>
+              <th>Purpose / Cause:</th>
+              <td id="receipt-cause">Child Education & Vidya Daan</td>
+            </tr>
+            <tr>
+              <th>Amount Donated:</th>
+              <td><strong id="receipt-amount" class="receipt-amount-val">₹1,100</strong> <span id="receipt-amount-words">(Rupees One Thousand One Hundred Only)</span></td>
+            </tr>
+            <tr>
+              <th>Beneficiary UPI ID:</th>
+              <td><code style="font-weight: 800; color: var(--navy-royal); font-size: 0.95rem;">shantanu.s08@ptaxis.com</code></td>
+            </tr>
+            <tr>
+              <th>Transaction ID / UTR No.:</th>
+              <td>
+                <strong id="receipt-txn-id" class="receipt-txn-val">UPI429381029482</strong>
+                <span class="badge-txn-verified">✓ 100% VERIFIED</span>
+              </td>
+            </tr>
+            <tr>
+              <th>Mode of Payment:</th>
+              <td>UPI / Online Real-Time Transfer (Instant Acknowledgement)</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="receipt-notes-text">
+          * Note: This receipt is issued as a verified acknowledgement of donation towards the charitable activities of Siddhi Vinayak Jan Kalyan Trust. All donations are exempted under Section 12A & 80G of the Indian Income Tax Act.
+        </div>
+
+        <div class="receipt-seal-row">
+          <div class="trust-stamp-box">
+            <div>★ VERIFIED CHARITABLE TRUST ★</div>
+            <div>REG NO: SVJKT/2026/VI42</div>
+            <div>GORAKHPUR, UP</div>
+          </div>
+
+          <div class="trust-sign-box">
+            <div class="sign-line"></div>
+            <div class="sign-title">Authorized Signatory / Trustee</div>
+            <div class="sign-org">Siddhi Vinayak Jan Kalyan Trust</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-receipt-actions">
+        <button type="button" class="btn-hero-secondary btn-print-receipt" onclick="window.print()">
+          🖨️ Print / Download PDF
+        </button>
+        <button type="button" class="btn-hero-secondary" onclick="shareReceiptWhatsApp()" style="background:#25D366; color:#FFF; border:none; font-weight:800; padding:12px 18px; border-radius:var(--radius-md); cursor:pointer;">
+          💬 Share on WhatsApp
+        </button>
+        <button type="button" class="btn-hero-primary btn-close-receipt" onclick="closeReceiptModal()">
+          Close
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ==========================================================================
+       MODAL 3: FULL DOCUMENT / LETTERHEAD VIEWER
+       ========================================================================== -->
+  <dialog class="custom-modal doc-modal-dialog" id="doc-modal" aria-labelledby="doc-modal-title">
+    <div class="modal-header">
+      <h3 id="doc-modal-title">📜 Official Trust Legal Charter</h3>
+      <button type="button" class="modal-close-btn" onclick="closeDocModal()" aria-label="Close dialog">✕</button>
+    </div>
+    <div class="modal-body doc-modal-body">
+      <img id="doc-modal-img" src="" alt="Legal Letterhead" class="doc-modal-preview-img">
+    </div>
+  </dialog>
+
+  <!-- ==========================================================================
+       MODAL 4: LEADER BIOGRAPHY & SEVA JOURNEY (DETAILED PROFILE VIEWER)
+       ========================================================================== -->
+  <dialog class="custom-modal leader-bio-dialog" id="leader-bio-modal" aria-labelledby="leader-modal-title">
+    <div class="modal-header">
+      <h3 id="leader-modal-title">॥ जीवन परिचय व सेवा यात्रा — नेतृत्व दर्शन ॥</h3>
+      <button type="button" class="modal-close-btn" onclick="closeLeaderBioModal()" aria-label="Close dialog">✕</button>
+    </div>
+    <div class="modal-body" id="leader-bio-modal-body">
+      <!-- Injected dynamically via app.js depending on which leader is clicked -->
+    </div>
+  </dialog>
+
+  <!-- Persistent Floating Action Button to Always View Receipt -->
+  <button type="button" id="floating-receipt-btn" class="floating-receipt-btn" onclick="showLastReceipt()" title="View Your Donation Receipt">
+    <span>📄 View Your Official Receipt</span>
+  </button>
+
+  <!-- Notification Toast -->
+  <div class="toast-msg" id="toast-msg">
+    <span>Item copied to clipboard!</span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
