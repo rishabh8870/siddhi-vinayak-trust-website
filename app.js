@@ -21,7 +21,7 @@ const appState = {
 const translations = {
   en: {
     top_badge: 'Official Portal',
-    top_alert: 'Govt. Reg No: SVJKT/2026/VI42',
+    top_alert: 'Govt. Reg No: SVJKT/IV 42/2026/',
     brand_tagline: 'COMMUNITY WELFARE • EDUCATION • HEALTHCARE • LIVELIHOOD • EMPOWERMENT',
     nav_home: 'Home',
     nav_about: 'About Us',
@@ -135,7 +135,7 @@ const translations = {
   },
   hi: {
     top_badge: 'आधिकारिक पोर्टल',
-    top_alert: 'पंजीकरण संख्या: VI42',
+    top_alert: 'पंजीकरण संख्या: IV42/2026',
     brand_tagline: 'सामुदायिक कल्याण • शिक्षा • स्वास्थ्य • आजीविका • सशक्तिकरण',
     nav_home: 'मुख्य पृष्ठ',
     nav_about: 'हमारे बारे में',
