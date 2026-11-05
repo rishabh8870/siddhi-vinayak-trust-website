@@ -1,9 +1,3 @@
-/* ==========================================================================
-   SIDDHI VINAYAK JAN KALYAN TRUST - LUXURY REGAL & SACRED DESIGN SYSTEM
-   Color Palette: Royal Navy, Sacred Temple Gold, Divine Vermilion, Pearl Silk
-   Enhanced with Golden Light Particles, Glassmorphism, and Fluid Animations
-   ========================================================================== */
-
 :root {
   /* Primary & Royal Tones */
   --navy-deep: #040D1B;
@@ -59,7 +53,9 @@
 }
 
 /* Reset & Global */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -81,7 +77,11 @@ body {
 }
 
 /* Typography Enhancements */
-h1, h2, h3, h4, .font-serif {
+h1,
+h2,
+h3,
+h4,
+.font-serif {
   font-family: 'Cinzel', 'Marcellus', Georgia, serif;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -161,8 +161,17 @@ h1, h2, h3, h4, .font-serif {
 }
 
 @keyframes pulse-badge {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.85; transform: scale(0.96); }
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.85;
+    transform: scale(0.96);
+  }
 }
 
 .top-contacts {
@@ -197,7 +206,7 @@ h1, h2, h3, h4, .font-serif {
   border: 1px solid var(--border-gold);
   border-radius: var(--radius-full);
   padding: 2px;
-  box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .lang-btn {
@@ -216,7 +225,7 @@ h1, h2, h3, h4, .font-serif {
   background: var(--gold-gradient);
   color: var(--navy-deep);
   font-weight: 800;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
 
 /* ==========================================================================
@@ -297,8 +306,17 @@ h1, h2, h3, h4, .font-serif {
 }
 
 @keyframes halo-pulse {
-  0%, 100% { transform: scale(1); opacity: 0.5; }
-  50% { transform: scale(1.15); opacity: 0.85; }
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1.15);
+    opacity: 0.85;
+  }
 }
 
 .brand-link:hover .brand-logo-wrap {
@@ -370,7 +388,8 @@ h1, h2, h3, h4, .font-serif {
   align-items: center;
 }
 
-.nav-drawer-header, .nav-drawer-footer {
+.nav-drawer-header,
+.nav-drawer-footer {
   display: none;
 }
 
@@ -398,7 +417,8 @@ h1, h2, h3, h4, .font-serif {
   transition: all var(--transition-fast);
 }
 
-.nav-link-icon, .nav-arrow {
+.nav-link-icon,
+.nav-arrow {
   display: none;
 }
 
@@ -466,8 +486,14 @@ h1, h2, h3, h4, .font-serif {
 }
 
 @keyframes shimmer-sweep {
-  0% { left: -100%; }
-  35%, 100% { left: 100%; }
+  0% {
+    left: -100%;
+  }
+
+  35%,
+  100% {
+    left: 100%;
+  }
 }
 
 .heart-pulse-icon {
@@ -477,11 +503,27 @@ h1, h2, h3, h4, .font-serif {
 }
 
 @keyframes heart-pulse {
-  0%, 100% { transform: scale(1); }
-  14% { transform: scale(1.22); }
-  28% { transform: scale(1); }
-  42% { transform: scale(1.18); }
-  70% { transform: scale(1); }
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  14% {
+    transform: scale(1.22);
+  }
+
+  28% {
+    transform: scale(1);
+  }
+
+  42% {
+    transform: scale(1.18);
+  }
+
+  70% {
+    transform: scale(1);
+  }
 }
 
 .btn-donate-nav:hover {
@@ -511,7 +553,8 @@ h1, h2, h3, h4, .font-serif {
   z-index: 1002;
 }
 
-.mobile-menu-toggle:hover, .mobile-menu-toggle:focus-visible {
+.mobile-menu-toggle:hover,
+.mobile-menu-toggle:focus-visible {
   background: var(--bg-sand);
   border-color: var(--gold-primary);
   box-shadow: 0 4px 14px rgba(212, 175, 55, 0.35);
@@ -577,8 +620,13 @@ h1, h2, h3, h4, .font-serif {
 }
 
 @keyframes rotate-mandala {
-  from { transform: translate(-50%, -50%) rotate(0deg); }
-  to { transform: translate(-50%, -50%) rotate(360deg); }
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 
 .hero-container {
@@ -595,7 +643,8 @@ h1, h2, h3, h4, .font-serif {
   margin-bottom: 25px;
 }
 
-.hero-seal-wrapper::before, .hero-seal-wrapper::after {
+.hero-seal-wrapper::before,
+.hero-seal-wrapper::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -620,8 +669,17 @@ h1, h2, h3, h4, .font-serif {
 }
 
 @keyframes auraPulse {
-  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.7; }
-  50% { transform: translate(-50%, -50%) scale(1.22); opacity: 1; }
+
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.22);
+    opacity: 1;
+  }
 }
 
 .hero-seal-img {
@@ -638,15 +696,22 @@ h1, h2, h3, h4, .font-serif {
 }
 
 @keyframes float-seal {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-7px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
 }
 
 .hero-devanagari-title {
   font-family: 'Rozha One', 'Noto Sans Devanagari', serif;
   font-size: 2.5rem;
   color: var(--gold-light);
-  text-shadow: 0 3px 15px rgba(0,0,0,0.6);
+  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.6);
   margin-bottom: 8px;
   line-height: 1.3;
 }
@@ -679,7 +744,7 @@ h1, h2, h3, h4, .font-serif {
   text-transform: uppercase;
   margin-bottom: 26px;
   backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
 .hero-tagline-bar span.bullet {
@@ -717,7 +782,7 @@ h1, h2, h3, h4, .font-serif {
   color: #F8FAFC;
   font-weight: 600;
   backdrop-filter: blur(8px);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: all var(--transition-fast);
 }
 
@@ -975,7 +1040,7 @@ h1, h2, h3, h4, .font-serif {
 
 .cause-pill-btn {
   background: var(--bg-sand);
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 9px 18px;
   border-radius: var(--radius-full);
   font-size: 0.88rem;
@@ -1008,7 +1073,7 @@ h1, h2, h3, h4, .font-serif {
 
 .amount-btn {
   background: #FFF;
-  border: 2px solid rgba(0,0,0,0.12);
+  border: 2px solid rgba(0, 0, 0, 0.12);
   padding: 15px 10px;
   border-radius: var(--radius-md);
   font-family: 'Cinzel', serif;
@@ -1052,7 +1117,7 @@ h1, h2, h3, h4, .font-serif {
 .custom-amount-input {
   width: 100%;
   padding: 14px 16px 14px 40px;
-  border: 2px solid rgba(0,0,0,0.12);
+  border: 2px solid rgba(0, 0, 0, 0.12);
   border-radius: var(--radius-md);
   font-size: 1.15rem;
   font-weight: 700;
@@ -1073,7 +1138,7 @@ h1, h2, h3, h4, .font-serif {
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
   padding: 18px 22px;
   margin-bottom: 28px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .impact-preview-title {
@@ -1114,7 +1179,7 @@ h1, h2, h3, h4, .font-serif {
 
 .text-input {
   padding: 12px 14px;
-  border: 1.5px solid rgba(0,0,0,0.15);
+  border: 1.5px solid rgba(0, 0, 0, 0.15);
   border-radius: var(--radius-sm);
   font-size: 0.95rem;
   color: var(--text-main);
@@ -1177,7 +1242,7 @@ h1, h2, h3, h4, .font-serif {
   text-align: center;
   color: var(--navy-deep);
   margin-bottom: 22px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
   border: 2.5px solid var(--gold-primary);
   position: relative;
   overflow: hidden;
@@ -1192,7 +1257,7 @@ h1, h2, h3, h4, .font-serif {
   align-items: center;
   justify-content: center;
   padding: 6px;
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: var(--radius-sm);
   position: relative;
   overflow: hidden;
@@ -1211,9 +1276,20 @@ h1, h2, h3, h4, .font-serif {
 }
 
 @keyframes laserScan {
-  0% { top: 0; opacity: 0.8; }
-  50% { top: 96%; opacity: 1; }
-  100% { top: 0; opacity: 0.8; }
+  0% {
+    top: 0;
+    opacity: 0.8;
+  }
+
+  50% {
+    top: 96%;
+    opacity: 1;
+  }
+
+  100% {
+    top: 0;
+    opacity: 0.8;
+  }
 }
 
 .qr-code-img {
@@ -1337,7 +1413,7 @@ h1, h2, h3, h4, .font-serif {
   border-radius: var(--radius-full);
   border: 1px solid var(--gold-primary);
   backdrop-filter: blur(8px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .cause-content {
@@ -1380,7 +1456,7 @@ h1, h2, h3, h4, .font-serif {
   background: var(--bg-sand);
   border-radius: var(--radius-full);
   overflow: hidden;
-  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .cause-progress-fill {
@@ -1398,13 +1474,18 @@ h1, h2, h3, h4, .font-serif {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
   animation: shimmerBar 2.5s infinite linear;
 }
 
 @keyframes shimmerBar {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 .cause-stats-meta {
@@ -2293,7 +2374,7 @@ h1, h2, h3, h4, .font-serif {
   border-radius: var(--radius-sm);
   background: #FFF;
   cursor: pointer;
-  border: 1px solid rgba(0,0,0,0.06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .letterhead-caption {
@@ -2352,7 +2433,7 @@ h1, h2, h3, h4, .font-serif {
   border-radius: var(--radius-md);
   margin-bottom: 16px;
   border-left: 3.5px solid var(--gold-primary);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
 }
 
 .office-info-title {
@@ -2454,7 +2535,7 @@ h1, h2, h3, h4, .font-serif {
   align-items: center;
   flex-wrap: wrap;
   gap: 18px;
-  box-shadow: 0 6px 25px rgba(0,0,0,0.45);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.45);
 }
 
 .exact-strip-col {
@@ -2569,7 +2650,7 @@ dialog.custom-modal::backdrop {
   padding: 34px;
   border-radius: var(--radius-md);
   position: relative;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
 .receipt-certificate::before {
@@ -2642,9 +2723,10 @@ dialog.custom-modal::backdrop {
   font-size: 0.92rem;
 }
 
-.receipt-table th, .receipt-table td {
+.receipt-table th,
+.receipt-table td {
   padding: 10px 14px;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   text-align: left;
 }
 
@@ -2673,7 +2755,7 @@ dialog.custom-modal::backdrop {
   align-items: flex-end;
   margin-top: 32px;
   padding-top: 22px;
-  border-top: 1.5px dashed rgba(0,0,0,0.18);
+  border-top: 1.5px dashed rgba(0, 0, 0, 0.18);
 }
 
 .trust-stamp-box {
@@ -2748,7 +2830,7 @@ dialog.custom-modal::backdrop {
   max-height: 80vh;
   object-fit: contain;
   border-radius: var(--radius-sm);
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* Notification Toast */
@@ -2761,7 +2843,7 @@ dialog.custom-modal::backdrop {
   padding: 15px 24px;
   border-radius: var(--radius-md);
   border-left: 5px solid var(--gold-primary);
-  box-shadow: 0 12px 35px rgba(0,0,0,0.35);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
   z-index: 9999;
   font-size: 0.95rem;
   font-weight: 700;
@@ -2794,10 +2876,12 @@ dialog.custom-modal::backdrop {
     transform: scale(0.95);
     box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
   }
+
   70% {
     transform: scale(1.15);
     box-shadow: 0 0 0 8px rgba(34, 197, 94, 0);
   }
+
   100% {
     transform: scale(0.95);
     box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
@@ -2810,7 +2894,7 @@ dialog.custom-modal::backdrop {
   border-radius: var(--radius-md);
   border: 1.5px solid rgba(212, 175, 55, 0.4);
   margin: 16px 0;
-  box-shadow: inset 0 1px 3px rgba(0,0,0,0.03);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.03);
 }
 
 .btn-upi-mobile-pay {
@@ -2897,9 +2981,12 @@ dialog.custom-modal::backdrop {
   body * {
     visibility: hidden;
   }
-  #receipt-modal, #receipt-modal * {
+
+  #receipt-modal,
+  #receipt-modal * {
     visibility: visible;
   }
+
   #receipt-modal {
     position: absolute;
     left: 0;
@@ -2909,7 +2996,9 @@ dialog.custom-modal::backdrop {
     padding: 0;
     box-shadow: none;
   }
-  .modal-header, .btn-receipt-actions {
+
+  .modal-header,
+  .btn-receipt-actions {
     display: none !important;
   }
 }
@@ -2922,9 +3011,11 @@ dialog.custom-modal::backdrop {
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);
   }
+
   .top-bar {
     padding-top: max(8px, env(safe-area-inset-top));
   }
+
   .official-blue-footer {
     padding-bottom: max(28px, env(safe-area-inset-bottom));
   }
@@ -2934,12 +3025,18 @@ dialog.custom-modal::backdrop {
    LARGE & HIGH-RESOLUTION DESKTOPS (1441px and above)
    ========================================================================== */
 @media (min-width: 1441px) {
-  .navbar, .top-bar-inner, .blue-footer-container, .section-container {
+
+  .navbar,
+  .top-bar-inner,
+  .blue-footer-container,
+  .section-container {
     max-width: 1340px;
   }
+
   .hero-container {
     max-width: 1100px;
   }
+
   .hero-english-title {
     font-size: 3.25rem;
   }
@@ -2952,27 +3049,34 @@ dialog.custom-modal::backdrop {
   .fund-hub-card {
     grid-template-columns: 1.1fr 0.9fr;
   }
+
   .causes-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 22px;
   }
+
   .footer-top-grid {
     gap: 28px;
   }
+
   .nav-menu {
     gap: 2px;
   }
+
   .nav-link {
     padding: 7px 10px;
     font-size: 0.88rem;
   }
+
   .btn-donate-nav {
     padding: 8px 16px;
     font-size: 0.88rem;
   }
+
   .brand-text .brand-title-en {
     font-size: 1.08rem;
   }
+
   .brand-text .brand-title-hi {
     font-size: 1.02rem;
   }
@@ -2983,6 +3087,7 @@ dialog.custom-modal::backdrop {
    Triggers clean Mobile Menu to avoid header crowding
    ========================================================================== */
 @media (max-width: 991px) {
+
   /* Mobile Navigation Drawer & Backdrop */
   body.nav-open {
     overflow: hidden !important;
@@ -3037,7 +3142,8 @@ dialog.custom-modal::backdrop {
     overflow-y: auto;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
-    padding-top: 68px; /* Clearance for sticky navbar & toggle button */
+    padding-top: 68px;
+    /* Clearance for sticky navbar & toggle button */
   }
 
   .nav-drawer.open {
@@ -3096,7 +3202,7 @@ dialog.custom-modal::backdrop {
     background: var(--gold-gradient);
     color: var(--navy-deep);
     font-weight: 800;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
   }
 
   /* Vertical Nav Menu Items */
@@ -3318,6 +3424,7 @@ dialog.custom-modal::backdrop {
    TABLETS PORTRAIT & PHABLETS (577px - 768px)
    ========================================================================== */
 @media (max-width: 768px) {
+
   /* Announcement Top Bar */
   .top-bar {
     padding: 8px 0;
@@ -3453,7 +3560,8 @@ dialog.custom-modal::backdrop {
     margin: 0 auto;
   }
 
-  .btn-hero-primary, .btn-hero-secondary {
+  .btn-hero-primary,
+  .btn-hero-secondary {
     width: 100%;
     justify-content: center;
     padding: 14px 22px;
@@ -3551,7 +3659,8 @@ dialog.custom-modal::backdrop {
   }
 
   .text-input {
-    font-size: 16px; /* Prevents auto-zoom in mobile Safari */
+    font-size: 16px;
+    /* Prevents auto-zoom in mobile Safari */
     padding: 11px 12px;
   }
 
@@ -3684,7 +3793,8 @@ dialog.custom-modal::backdrop {
     font-size: 0.82rem;
   }
 
-  .receipt-table th, .receipt-table td {
+  .receipt-table th,
+  .receipt-table td {
     padding: 8px 8px;
   }
 
@@ -3894,7 +4004,8 @@ dialog.custom-modal::backdrop {
     font-size: 0.75rem;
   }
 
-  .qr-code-box, .modal-qr-box {
+  .qr-code-box,
+  .modal-qr-box {
     width: 145px;
     height: 145px;
   }
@@ -3922,7 +4033,8 @@ dialog.custom-modal::backdrop {
     font-size: 0.95rem;
   }
 
-  .receipt-table th, .receipt-table td {
+  .receipt-table th,
+  .receipt-table td {
     padding: 6px 6px;
     font-size: 0.78rem;
   }
@@ -3951,20 +4063,25 @@ dialog.custom-modal::backdrop {
     grid-template-columns: 1fr;
     gap: 24px;
   }
+
   .founder-spotlight-grid {
     grid-template-columns: 1fr;
     gap: 24px;
   }
+
   .founder-pillars-grid {
     grid-template-columns: 1fr;
     gap: 16px;
   }
+
   .seva-yatra-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .trust-objectives-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .leader-bio-modal-grid {
     grid-template-columns: 1fr;
   }
@@ -3974,25 +4091,30 @@ dialog.custom-modal::backdrop {
   .seva-yatra-grid {
     grid-template-columns: 1fr;
   }
+
   .trust-objectives-grid {
     grid-template-columns: 1fr;
   }
+
   .leader-profile-row {
     flex-direction: column;
     text-align: center;
   }
+
   .leader-avatar-frame {
     margin: 0 auto;
   }
+
   .leader-chips-row {
     justify-content: center;
   }
+
   .leader-actions-row {
     flex-direction: column;
   }
-  .btn-leader-bio, .btn-leader-poster-trigger {
+
+  .btn-leader-bio,
+  .btn-leader-poster-trigger {
     width: 100%;
   }
 }
-
-
