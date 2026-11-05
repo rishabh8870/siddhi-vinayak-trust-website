@@ -14,6 +14,43 @@
 
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="assets/ganesha_seal.png">
+
+  <!-- Permanent removal of Netlify Drawer / Powered by Netlify badge -->
+  <style>
+    netlify-drawer,
+    #netlify-drawer,
+    [data-netlify-drawer],
+    .netlify-drawer,
+    iframe[src*="netlify"],
+    div[class*="netlify-drawer"],
+    div[id*="netlify-drawer"] {
+      display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+      position: fixed !important;
+      left: -99999px !important;
+      top: -99999px !important;
+      width: 0 !important;
+      height: 0 !important;
+      z-index: -99999 !important;
+    }
+  </style>
+  <script>
+    (function() {
+      function purgeNetlifyBadge() {
+        document.querySelectorAll('netlify-drawer, #netlify-drawer, [data-netlify-drawer], .netlify-drawer, iframe[src*="netlify"]').forEach(function(el) {
+          try { el.remove(); } catch(e) {}
+        });
+      }
+      purgeNetlifyBadge();
+      window.addEventListener('DOMContentLoaded', purgeNetlifyBadge);
+      window.addEventListener('load', purgeNetlifyBadge);
+      if (window.MutationObserver) {
+        new MutationObserver(purgeNetlifyBadge).observe(document.documentElement, { childList: true, subtree: true });
+      }
+    })();
+  </script>
 </head>
 <body>
 

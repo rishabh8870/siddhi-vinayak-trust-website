@@ -4,6 +4,22 @@
  * Bilingual (EN/HI) Localization, Modal Controllers, and Animated Impact Counters.
  */
 
+// Aggressive suppression of Netlify Drawer badge
+(function removeNetlifyBadge() {
+  function purge() {
+    const list = document.querySelectorAll('netlify-drawer, #netlify-drawer, [data-netlify-drawer], .netlify-drawer, iframe[src*="netlify"]');
+    list.forEach(el => {
+      try { el.remove(); } catch(e) {}
+    });
+  }
+  purge();
+  if (typeof window !== 'undefined') {
+    window.addEventListener('DOMContentLoaded', purge);
+    window.addEventListener('load', purge);
+    setInterval(purge, 300);
+  }
+})();
+
 // Current Application State
 const appState = {
   lang: 'en',
