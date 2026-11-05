@@ -927,7 +927,7 @@ const leadersData = {
     exp_badge: '🛡️ 12 Years Leadership (Since 2014)',
     poster: 'assets/leader_rahul_tripathi.png',
     avatar: 'assets/leader_rahul_tripathi_avatar.png',
-    phone: '+91 7390050061',
+    phone: '+91 8449015875',
     email: 'info@siddhivinayaktrust.org',
     location: 'गोरखपुर एवं पूर्वांचल अंचल',
     quote_hi: '"युवा सोच, पारदर्शी कार्य - सेवा ही लक्ष्य • सेवा - निष्ठा - पारदर्शिता • सेवा - सुरक्षा - समर्पण • युवा - निर्भय - समर्पित"',
