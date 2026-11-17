@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>गैलरी प्रबंधन | Siddhi Vinayak Jan Kalyan Trust</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" href="assets/ganesha_seal.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Rozha+One&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy-deep: #040D1B;
+      --navy-dark: #0A1B3A;
+      --navy-royal: #0E2954;
+      --gold-primary: #D4AF37;
+      --gold-light: #F3E5AB;
+      --gold-dark: #997316;
+      --vermilion: #C83E29;
+      --bg-body: #061124;
+      --bg-card: #0A1C38;
+      --border-gold: rgba(212, 175, 55, 0.35);
+      --text-light: #F8FAFC;
+      --text-muted: #94A3B8;
+      --radius-lg: 18px;
+      --radius-md: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', 'Noto Sans Devanagari', sans-serif;
+      background: radial-gradient(circle at 50% 10%, #0D2650 0%, var(--bg-body) 65%, #020710 100%);
+      color: var(--text-light);
+      min-height: 100vh;
+      padding: 24px 16px 60px;
+    }
+
+    .admin-container {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .admin-header {
+      text-align: center;
+      padding: 20px 16px 30px;
+      border-bottom: 1px solid var(--border-gold);
+      margin-bottom: 32px;
+      position: relative;
+    }
+
+    .admin-emblem {
+      width: 70px;
+      height: 70px;
+      margin: 0 auto 12px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #FFE599, var(--gold-primary), #997316);
+      padding: 3px;
+      box-shadow: 0 4px 20px rgba(212, 175, 55, 0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .admin-emblem img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: #FFF;
+      object-fit: cover;
+    }
+
+    .admin-title-hi {
+      font-family: 'Rozha One', 'Noto Sans Devanagari', serif;
+      font-size: 1.6rem;
+      color: var(--gold-light);
+      margin-bottom: 4px;
+      letter-spacing: 0.5px;
+    }
+
+    .admin-title-en {
+      font-family: 'Cinzel', serif;
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: #CBD5E1;
+      margin-bottom: 10px;
+    }
+
+    .admin-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(212, 175, 55, 0.14);
+      color: var(--gold-light);
+      border: 1px solid var(--border-gold);
+      padding: 5px 14px;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+    }
+
+    /* Grid Layout */
+    .admin-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    /* Card Panels */
+    .panel-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius-lg);
+      padding: 26px 24px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      position: relative;
+    }
+
+    .panel-card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    .panel-card-title span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .count-badge {
+      background: var(--gold-primary);
+      color: var(--navy-deep);
+      font-size: 0.78rem;
+      font-weight: 800;
+      padding: 3px 12px;
+      border-radius: 9999px;
+    }
+
+    /* Form Styles */
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #E2E8F0;
+      margin-bottom: 6px;
+    }
+
+    .form-input, .form-select {
+      width: 100%;
+      padding: 12px 14px;
+      background: rgba(4, 13, 27, 0.75);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: var(--radius-md);
+      color: #FFF;
+      font-size: 0.95rem;
+      font-family: inherit;
+      transition: all 0.25s ease;
+    }
+
+    .form-input:focus, .form-select:focus {
+      outline: none;
+      border-color: var(--gold-primary);
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.25);
+    }
+
+    /* File Upload Box */
+    .file-upload-box {
+      border: 2px dashed rgba(212, 175, 55, 0.45);
+      border-radius: var(--radius-md);
+      padding: 24px 16px;
+      text-align: center;
+      background: rgba(4, 13, 27, 0.45);
+      cursor: pointer;
+      transition: all 0.25s ease;
+      position: relative;
+    }
+
+    .file-upload-box:hover, .file-upload-box.dragover {
+      border-color: var(--gold-primary);
+      background: rgba(212, 175, 55, 0.08);
+    }
+
+    .file-upload-box input[type="file"] {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+    }
+
+    .upload-icon {
+      font-size: 2.2rem;
+      margin-bottom: 8px;
+    }
+
+    .upload-text {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #E2E8F0;
+    }
+
+    .upload-subtext {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .image-preview-wrap {
+      margin-top: 14px;
+      display: none;
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border-gold);
+      max-height: 240px;
+    }
+
+    .image-preview-wrap img {
+      width: 100%;
+      max-height: 240px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Buttons */
+    .btn-submit {
+      width: 100%;
+      background: linear-gradient(135deg, #FFE599 0%, #D4AF37 55%, #A87C10 100%);
+      color: #040D1B;
+      font-family: inherit;
+      font-weight: 800;
+      font-size: 1rem;
+      padding: 14px 20px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      cursor: pointer;
+      box-shadow: 0 4px 18px rgba(212, 175, 55, 0.35);
+      transition: all 0.25s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(212, 175, 55, 0.55);
+      background: linear-gradient(135deg, #FFF0B3 0%, #FFDF73 40%, #D4AF37 80%, #B38600 100%);
+    }
+
+    /* Photo Management List */
+    .admin-photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .admin-photo-card {
+      background: rgba(4, 13, 27, 0.7);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.25s ease;
+      position: relative;
+    }
+
+    .admin-photo-card:hover {
+      border-color: var(--gold-primary);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .admin-photo-img-wrap {
+      width: 100%;
+      height: 180px;
+      background: #020710;
+      position: relative;
+    }
+
+    .admin-photo-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .admin-photo-chip {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(4, 13, 27, 0.85);
+      color: var(--gold-light);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      border: 1px solid rgba(212, 175, 55, 0.4);
+    }
+
+    .admin-photo-body {
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .admin-photo-title {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #E2E8F0;
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .btn-delete {
+      background: rgba(200, 62, 41, 0.15);
+      border: 1px solid rgba(200, 62, 41, 0.5);
+      color: #F87171;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      width: 100%;
+    }
+
+    .btn-delete:hover {
+      background: var(--vermilion);
+      color: #FFF;
+      border-color: var(--vermilion);
+      box-shadow: 0 4px 14px rgba(200, 62, 41, 0.4);
+    }
+
+    .admin-actions-bar {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(212, 175, 55, 0.2);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn-reset {
+      background: transparent;
+      border: 1px solid var(--border-gold);
+      color: var(--gold-light);
+      padding: 9px 16px;
+      border-radius: var(--radius-md);
+      font-size: 0.84rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .btn-reset:hover {
+      background: rgba(212, 175, 55, 0.15);
+      border-color: var(--gold-primary);
+    }
+
+    .view-site-link {
+      color: var(--gold-light);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s ease;
+    }
+
+    .view-site-link:hover {
+      color: #FFF;
+      text-decoration: underline;
+    }
+
+    /* Toast Notification */
+    .toast-msg {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #0E2954;
+      border: 1px solid var(--gold-primary);
+      color: #FFF;
+      padding: 12px 20px;
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      font-size: 0.92rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+      z-index: 9999;
+      pointer-events: none;
+    }
+
+    .toast-msg.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Empty state */
+    .empty-state {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--text-muted);
+      grid-column: 1 / -1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="admin-container">
+    <!-- Header -->
+    <header class="admin-header">
+      <div class="admin-emblem">
+        <img src="assets/ganesha_seal.png" alt="Siddhi Vinayak Trust Seal">
+      </div>
+      <h1 class="admin-title-hi">सिद्धि विनायक जन कल्याण ट्रस्ट</h1>
+      <div class="admin-title-en">SIDDHI VINAYAK JAN KALYAN TRUST</div>
+      <div class="admin-badge">🔐 Gallery Management System • फोटो गैलरी प्रबंधन</div>
+    </header>
+
+    <div class="admin-grid">
+
+      <!-- SECTION: ADD NEW PHOTO -->
+      <section class="panel-card">
+        <h2 class="panel-card-title">
+          <span>➕ नई फोटो जोड़ें (Add New Photo)</span>
+        </h2>
+
+        <form id="add-photo-form" onsubmit="handleSavePhoto(event)">
+          <!-- File Upload Option -->
+          <div class="form-group">
+            <label class="form-label">फोटो चुनें (Select Photo from Phone/Computer) *</label>
+            <div class="file-upload-box" id="drop-box">
+              <input type="file" id="photo-file" accept="image/*" onchange="handleFileSelect(event)">
+              <div class="upload-icon">📷</div>
+              <div class="upload-text" id="upload-label-text">फ़ाइल चुनें या यहाँ ड्रैग करें</div>
+              <div class="upload-subtext">JPG, PNG, WebP (फ़ाइल स्वचालित रूप से अनुकूलित होगी)</div>
+            </div>
+            <div class="image-preview-wrap" id="preview-wrap">
+              <img id="image-preview" src="" alt="Preview">
+            </div>
+          </div>
+
+          <!-- Or Image URL -->
+          <div class="form-group">
+            <label class="form-label">या फोटो का लिंक / URL डालें (Optional Image URL)</label>
+            <input type="url" id="photo-url" class="form-input" placeholder="https://example.com/photo.jpg" oninput="handleUrlInput(this.value)">
+          </div>
+
+          <!-- Photo Title -->
+          <div class="form-group">
+            <label class="form-label">फोटो का शीर्षक / विवरण (Title / Description) *</label>
+            <input type="text" id="photo-title" class="form-input" placeholder="उदा. 7वां राष्ट्रीय अधिवेशन तथा सम्मान समारोह" required>
+          </div>
+
+          <!-- Category -->
+          <div class="form-group">
+            <label class="form-label">श्रेणी / टैग (Category Tag)</label>
+            <select id="photo-tag" class="form-select">
+              <option value="सम्मान समारोह">सम्मान समारोह (Ceremony / Awards)</option>
+              <option value="राष्ट्रीय अधिवेशन">राष्ट्रीय अधिवेशन (National Convention)</option>
+              <option value="राष्ट्रीय पर्व">राष्ट्रीय पर्व (Independence / Republic Day)</option>
+              <option value="सेवा प्रकल्प">सेवा प्रकल्प (Social Welfare)</option>
+              <option value="शिक्षा व छात्र">शिक्षा व छात्र (Child Education)</option>
+              <option value="आरोग्य शिविर">आरोग्य शिविर (Medical Camp)</option>
+              <option value="अन्य कार्यक्रम">अन्य कार्यक्रम (General Activities)</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn-submit">
+            <span>💾 गैलरी में फोटो सेव करें (Save Photo to Gallery)</span>
+          </button>
+        </form>
+      </section>
+
+      <!-- SECTION: CURRENT GALLERY PHOTOS -->
+      <section class="panel-card">
+        <h2 class="panel-card-title">
+          <span>🖼️ वर्तमान गैलरी फोटो सूची (Current Photos)</span>
+          <span class="count-badge" id="photo-count-badge">0 Photos</span>
+        </h2>
+
+        <div class="admin-photo-grid" id="admin-photo-list">
+          <!-- Dynamically populated -->
+        </div>
+
+        <div class="admin-actions-bar">
+          <button type="button" class="btn-reset" onclick="handleResetDefaults()">
+            ↺ मूल 5 फोटो रीस्टोर करें (Reset to Default)
+          </button>
+          <a href="index.html#gallery" class="view-site-link" target="_blank">
+            🌐 मुख्य वेबसाइट पर गैलरी देखें (View Site) ↗
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <div class="toast-msg" id="toast-msg">✓ फोटो सेव हो गई!</div>
+
+  <script>
+    const DEFAULT_GALLERY = [
+      {
+        id: 'gal-1',
+        src: 'assets/gallery_1.jpg',
+        title_hi: '7वां राष्ट्रीय अधिवेशन तथा पत्रकार सम्मान समारोह में मुख्य अतिथियों द्वारा सम्मान पत्र व स्मृति चिन्ह',
+        title_en: '7th National Convention & Journalist Felicitation Ceremony with Distinguished Guests',
+        tag_hi: 'सम्मान समारोह',
+        tag_en: 'Ceremony',
+        date: '2026'
+      },
+      {
+        id: 'gal-2',
+        src: 'assets/gallery_2.jpg',
+        title_hi: 'भारतीय पत्रकार सुरक्षा परिषद - राष्ट्रीय अधिवेशन सम्मान पत्र एवं स्मृति चिन्ह अलंकरण',
+        title_en: 'Bhartiya Patrakar Suraksha Parishad - National Convention Honor & Memento',
+        tag_hi: 'राष्ट्रीय सम्मान',
+        tag_en: 'National Honor',
+        date: '2026'
+      },
+      {
+        id: 'gal-3',
+        src: 'assets/gallery_3.jpg',
+        title_hi: 'निराला सभागार में विशिष्ट अतिथियों द्वारा सम्मान पत्र एवं अंगवस्त्र भेंट',
+        title_en: 'Presentation of Citation & Sacred Angavastram at Nirala Auditorium',
+        tag_hi: 'अधिवेशन',
+        tag_en: 'Convention',
+        date: '2026'
+      },
+      {
+        id: 'gal-4',
+        src: 'assets/gallery_4.jpg',
+        title_hi: 'राष्ट्रीय अधिवेशन मंच पर सम्मानित सदस्यों के साथ संस्था के पदाधिकारी',
+        title_en: 'Trust Dignitaries with Honored Members on Stage at National Convention',
+        tag_hi: 'सामाजिक कार्यक्रम',
+        tag_en: 'Community Event',
+        date: '2026'
+      },
+      {
+        id: 'gal-5',
+        src: 'assets/gallery_5.jpg',
+        title_hi: 'राष्ट्रीय ध्वजारोहण एवं सामाजिक सौहार्द व एकता कार्यक्रम',
+        title_en: 'National Flag Hoisting & Social Harmony & Unity Program',
+        tag_hi: 'राष्ट्रीय पर्व',
+        tag_en: 'National Festival',
+        date: '2026'
+      }
+    ];
+
+    let currentImageDataUrl = '';
+
+    function getStoredGallery() {
+      try {
+        const data = localStorage.getItem('svjkt_gallery_photos');
+        if (data) {
+          const parsed = JSON.parse(data);
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            return parsed;
+          }
+        }
+      } catch (e) {
+        console.warn('Storage read error:', e);
+      }
+      return [...DEFAULT_GALLERY];
+    }
+
+    function saveGallery(list) {
+      try {
+        localStorage.setItem('svjkt_gallery_photos', JSON.stringify(list));
+      } catch (e) {
+        console.error('Failed to save to localStorage:', e);
+        alert('स्टोरेज सीमा पूरी हो गई है। कृपया कम साइज़ की इमेज अपलोड करें।');
+      }
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast-msg');
+      if (toast) {
+        toast.textContent = msg;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 3000);
+      }
+    }
+
+    // Compress & downscale image using canvas to save storage
+    function processAndCompressImage(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          const img = new Image();
+          img.onload = () => {
+            const maxDim = 1200;
+            let width = img.width;
+            let height = img.height;
+            if (width > maxDim || height > maxDim) {
+              if (width > height) {
+                height = Math.round((height * maxDim) / width);
+                width = maxDim;
+              } else {
+                width = Math.round((width * maxDim) / height);
+                height = maxDim;
+              }
+            }
+            const canvas = document.createElement('canvas');
+            canvas.width = width;
+            canvas.height = height;
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(img, 0, 0, width, height);
+            const compressed = canvas.toDataURL('image/jpeg', 0.82);
+            resolve(compressed);
+          };
+          img.onerror = reject;
+          img.src = event.target.result;
+        };
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+      });
+    }
+
+    async function handleFileSelect(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      const labelText = document.getElementById('upload-label-text');
+      if (labelText) labelText.textContent = 'चयनित: ' + file.name;
+
+      try {
+        currentImageDataUrl = await processAndCompressImage(file);
+        const preview = document.getElementById('image-preview');
+        const wrap = document.getElementById('preview-wrap');
+        if (preview && wrap) {
+          preview.src = currentImageDataUrl;
+          wrap.style.display = 'block';
+        }
+        document.getElementById('photo-url').value = '';
+      } catch (err) {
+        alert('फ़ोटो पढ़ने में त्रुटि। कृपया कोई अन्य JPG या PNG फ़ोटो चुनें।');
+      }
+    }
+
+    function handleUrlInput(val) {
+      if (val.trim()) {
+        currentImageDataUrl = val.trim();
+        const preview = document.getElementById('image-preview');
+        const wrap = document.getElementById('preview-wrap');
+        if (preview && wrap) {
+          preview.src = currentImageDataUrl;
+          wrap.style.display = 'block';
+        }
+        document.getElementById('photo-file').value = '';
+        document.getElementById('upload-label-text').textContent = 'फ़ाइल चुनें या यहाँ ड्रैग करें';
+      }
+    }
+
+    function handleSavePhoto(e) {
+      e.preventDefault();
+      const title = document.getElementById('photo-title').value.trim();
+      const tag = document.getElementById('photo-tag').value;
+      const urlInput = document.getElementById('photo-url').value.trim();
+      const imageSrc = currentImageDataUrl || urlInput;
+
+      if (!imageSrc) {
+        alert('कृपया कोई फ़ोटो चुनें या फ़ोटो का URL दर्ज करें!');
+        return;
+      }
+
+      const list = getStoredGallery();
+      const newPhoto = {
+        id: 'gal-' + Date.now(),
+        src: imageSrc,
+        title_hi: title,
+        title_en: title,
+        tag_hi: tag,
+        tag_en: tag,
+        date: new Date().getFullYear().toString()
+      };
+
+      list.unshift(newPhoto);
+      saveGallery(list);
+      renderAdminList();
+
+      // Reset form
+      document.getElementById('add-photo-form').reset();
+      currentImageDataUrl = '';
+      document.getElementById('preview-wrap').style.display = 'none';
+      document.getElementById('upload-label-text').textContent = 'फ़ाइल चुनें या यहाँ ड्रैग करें';
+
+      showToast('✓ नई फोटो गैलरी में जोड़ दी गई!');
+    }
+
+    function handleRemovePhoto(id) {
+      const list = getStoredGallery();
+      const target = list.find(item => item.id === id);
+      const name = target ? (target.title_hi || target.title_en || 'इस फोटो') : 'इस फोटो';
+
+      if (confirm(`क्या आप सचमुच "${name}" को गैलरी से हटाना चाहते हैं?`)) {
+        const filtered = list.filter(item => item.id !== id);
+        saveGallery(filtered);
+        renderAdminList();
+        showToast('✓ फोटो गैलरी से हटा दी गई!');
+      }
+    }
+
+    function handleResetDefaults() {
+      if (confirm('क्या आप गैलरी को मूल 5 डिफॉल्ट फोटो पर रीस्टोर करना चाहते हैं?')) {
+        saveGallery([...DEFAULT_GALLERY]);
+        renderAdminList();
+        showToast('↺ मूल 5 फोटो रीस्टोर कर दी गईं!');
+      }
+    }
+
+    function renderAdminList() {
+      const container = document.getElementById('admin-photo-list');
+      const badge = document.getElementById('photo-count-badge');
+      if (!container) return;
+
+      const list = getStoredGallery();
+      badge.textContent = `${list.length} Photos`;
+
+      if (list.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <p>गैलरी में कोई फ़ोटो नहीं है। ऊपर दिए गए फ़ॉर्म से नई फ़ोटो जोड़ें।</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = list.map(item => {
+        const title = item.title_hi || item.title_en || 'Gallery Image';
+        const tag = item.tag_hi || item.tag_en || 'सम्मान';
+        return `
+          <div class="admin-photo-card" id="card-${item.id}">
+            <div class="admin-photo-img-wrap">
+              <img src="${item.src}" alt="${title}" loading="lazy">
+              <span class="admin-photo-chip">${tag}</span>
+            </div>
+            <div class="admin-photo-body">
+              <div class="admin-photo-title" title="${title}">${title}</div>
+              <button type="button" class="btn-delete" onclick="handleRemovePhoto('${item.id}')">
+                <span>🗑️ हटाएं (Remove)</span>
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Initialize on load
+    document.addEventListener('DOMContentLoaded', () => {
+      // Ensure defaults exist in storage
+      if (!localStorage.getItem('svjkt_gallery_photos')) {
+        saveGallery([...DEFAULT_GALLERY]);
+      }
+      renderAdminList();
+    });
+  </script>
+</body>
+</html>

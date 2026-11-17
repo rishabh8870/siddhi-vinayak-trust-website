@@ -44,9 +44,13 @@ const translations = {
     nav_causes: 'Causes & Funds',
     nav_donate: 'Donate Hub',
     nav_leadership: 'Leadership',
+    nav_gallery: 'Gallery',
     nav_transparency: 'Charter & Reg',
     nav_contact: 'Contact',
     nav_btn_donate: 'Donate Now',
+    gallery_badge: 'Photo Gallery • Seva Yatra',
+    gallery_title: 'Trust Activities & Honors Gallery',
+    gallery_desc: 'Glimpses of conferences, national conventions, journalist honor ceremonies, flag hoisting, and public welfare initiatives by Siddhi Vinayak Jan Kalyan Trust.',
     tag_welfare: 'Community Welfare',
     tag_edu: 'Education',
     tag_health: 'Healthcare',
@@ -158,9 +162,13 @@ const translations = {
     nav_causes: 'पुण्य प्रकल्प',
     nav_donate: 'दान केंद्र',
     nav_leadership: 'नेतृत्व',
+    nav_gallery: 'फोटो गैलरी',
     nav_transparency: 'पंजीकरण व पत्र',
     nav_contact: 'संपर्क करें',
     nav_btn_donate: 'दान करें',
+    gallery_badge: 'सेवा एवं सम्मान छायाचित्र',
+    gallery_title: 'पुण्य प्रकल्प एवं सामाजिक कार्यक्रम गैलरी',
+    gallery_desc: 'सिद्धि विनायक जन कल्याण ट्रस्ट द्वारा आयोजित राष्ट्रीय अधिवेशन, पत्रकार सम्मान समारोह, ध्वजारोहण एवं जनकल्याणकारी सेवा अभियानों की जीवंत झलकियाँ।',
     tag_welfare: 'सामुदायिक कल्याण',
     tag_edu: 'शिक्षा संवर्धन',
     tag_health: 'आरोग्य सेवा',
@@ -381,6 +389,7 @@ function setLanguage(lang) {
   });
 
   updateImpactText(appState.currentAmount);
+  renderGallery();
   showToast(lang === 'hi' ? 'भाषा हिन्दी में बदली गई' : 'Language switched to English');
 }
 
@@ -1351,6 +1360,106 @@ function animateCount(elem, target) {
   requestAnimationFrame(step);
 }
 
+// ==========================================================================
+// PHOTO GALLERY SYSTEM (WITH REAL-TIME STORAGE SYNC)
+// ==========================================================================
+const DEFAULT_GALLERY = [
+  {
+    id: 'gal-1',
+    src: 'assets/gallery_1.jpg',
+    title_hi: '7वां राष्ट्रीय अधिवेशन तथा पत्रकार सम्मान समारोह में मुख्य अतिथियों द्वारा सम्मान पत्र व स्मृति चिन्ह',
+    title_en: '7th National Convention & Journalist Felicitation Ceremony with Distinguished Guests',
+    tag_hi: 'सम्मान समारोह',
+    tag_en: 'Ceremony',
+    date: '2026'
+  },
+  {
+    id: 'gal-2',
+    src: 'assets/gallery_2.jpg',
+    title_hi: 'भारतीय पत्रकार सुरक्षा परिषद - राष्ट्रीय अधिवेशन सम्मान पत्र एवं स्मृति चिन्ह अलंकरण',
+    title_en: 'Bhartiya Patrakar Suraksha Parishad - National Convention Honor & Memento',
+    tag_hi: 'राष्ट्रीय सम्मान',
+    tag_en: 'National Honor',
+    date: '2026'
+  },
+  {
+    id: 'gal-3',
+    src: 'assets/gallery_3.jpg',
+    title_hi: 'निराला सभागार में विशिष्ट अतिथियों द्वारा सम्मान पत्र एवं अंगवस्त्र भेंट',
+    title_en: 'Presentation of Citation & Sacred Angavastram at Nirala Auditorium',
+    tag_hi: 'अधिवेशन',
+    tag_en: 'Convention',
+    date: '2026'
+  },
+  {
+    id: 'gal-4',
+    src: 'assets/gallery_4.jpg',
+    title_hi: 'राष्ट्रीय अधिवेशन मंच पर सम्मानित सदस्यों के साथ संस्था के पदाधिकारी',
+    title_en: 'Trust Dignitaries with Honored Members on Stage at National Convention',
+    tag_hi: 'सामाजिक कार्यक्रम',
+    tag_en: 'Community Event',
+    date: '2026'
+  },
+  {
+    id: 'gal-5',
+    src: 'assets/gallery_5.jpg',
+    title_hi: 'राष्ट्रीय ध्वजारोहण एवं सामाजिक सौहार्द व एकता कार्यक्रम',
+    title_en: 'National Flag Hoisting & Social Harmony & Unity Program',
+    tag_hi: 'राष्ट्रीय पर्व',
+    tag_en: 'National Festival',
+    date: '2026'
+  }
+];
+
+function getGalleryPhotos() {
+  try {
+    const saved = localStorage.getItem('svjkt_gallery_photos');
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      if (Array.isArray(parsed) && parsed.length > 0) {
+        return parsed;
+      }
+    }
+  } catch (e) {
+    console.warn('Gallery read error:', e);
+  }
+  return DEFAULT_GALLERY;
+}
+
+function renderGallery() {
+  const container = document.getElementById('gallery-grid');
+  if (!container) return;
+  const photos = getGalleryPhotos();
+  const isHi = appState.lang === 'hi';
+
+  container.innerHTML = photos.map((item, index) => {
+    const title = isHi ? (item.title_hi || item.title || item.title_en) : (item.title_en || item.title || item.title_hi);
+    const tag = isHi ? (item.tag_hi || item.tag || 'सेवा यात्रा') : (item.tag_en || item.tag || 'Gallery');
+    return `
+      <article class="gallery-card" data-gallery-id="${item.id || index}">
+        <div class="gallery-img-wrap" onclick="openDocModal('${item.src}')" title="${title}">
+          <img src="${item.src}" alt="${title}" class="gallery-img" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-zoom-badge">🔍 बड़ी तस्वीर देखें</span>
+          </div>
+          <span class="gallery-chip">${tag}</span>
+        </div>
+        <div class="gallery-info">
+          <h4 class="gallery-card-title">${title}</h4>
+          ${item.date ? `<span class="gallery-date">📅 ${item.date}</span>` : ''}
+        </div>
+      </article>
+    `;
+  }).join('');
+}
+
+// Real-time synchronization when updated from admin.html
+window.addEventListener('storage', (e) => {
+  if (e.key === 'svjkt_gallery_photos') {
+    renderGallery();
+  }
+});
+
 // Global Application Initialization on DOM Ready
 document.addEventListener('DOMContentLoaded', () => {
   initMobileNavigation();
@@ -1358,6 +1467,7 @@ document.addEventListener('DOMContentLoaded', () => {
   updateFloatingReceiptButton();
   updateQrCode(appState.currentAmount, appState.currentCause);
   updateImpactText(appState.currentAmount);
+  renderGallery();
 });
 
 // Also initialize immediately if script executes after DOM is ready
@@ -1367,5 +1477,6 @@ if (document.readyState === 'complete' || document.readyState === 'interactive')
   updateFloatingReceiptButton();
   updateQrCode(appState.currentAmount, appState.currentCause);
   updateImpactText(appState.currentAmount);
+  renderGallery();
 }
 
