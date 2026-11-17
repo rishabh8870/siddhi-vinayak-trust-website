@@ -1367,47 +1367,47 @@ const DEFAULT_GALLERY = [
   {
     id: 'gal-1',
     src: 'assets/gallery_1.jpg',
-    title_hi: '7वां राष्ट्रीय अधिवेशन तथा पत्रकार सम्मान समारोह में मुख्य अतिथियों द्वारा सम्मान पत्र व स्मृति चिन्ह',
-    title_en: '7th National Convention & Journalist Felicitation Ceremony with Distinguished Guests',
-    tag_hi: 'सम्मान समारोह',
-    tag_en: 'Ceremony',
-    date: '2026'
+    title_hi: '7वां राष्ट्रीय अधिवेशन तथा पत्रकार सम्मान समारोह — मुख्य अतिथि मंच',
+    title_en: '7th National Convention & Journalist Felicitation — Distinguished Guests on Stage',
+    tag_hi: 'राष्ट्रीय अधिवेशन',
+    tag_en: 'National Convention',
+    date: '2026 — निराला सभागार'
   },
   {
     id: 'gal-2',
     src: 'assets/gallery_2.jpg',
-    title_hi: 'भारतीय पत्रकार सुरक्षा परिषद - राष्ट्रीय अधिवेशन सम्मान पत्र एवं स्मृति चिन्ह अलंकरण',
-    title_en: 'Bhartiya Patrakar Suraksha Parishad - National Convention Honor & Memento',
-    tag_hi: 'राष्ट्रीय सम्मान',
-    tag_en: 'National Honor',
-    date: '2026'
+    title_hi: 'भारतीय पत्रकार सुरक्षा परिषद — प्रशस्ति पत्र एवं स्मृति चिन्ह अलंकरण',
+    title_en: 'Bhartiya Patrakar Suraksha Parishad — Citation & Memento Presentation',
+    tag_hi: 'सम्मान समारोह',
+    tag_en: 'Honor Ceremony',
+    date: '2026 — राष्ट्रीय सम्मेलन'
   },
   {
     id: 'gal-3',
     src: 'assets/gallery_3.jpg',
-    title_hi: 'निराला सभागार में विशिष्ट अतिथियों द्वारा सम्मान पत्र एवं अंगवस्त्र भेंट',
-    title_en: 'Presentation of Citation & Sacred Angavastram at Nirala Auditorium',
-    tag_hi: 'अधिवेशन',
-    tag_en: 'Convention',
-    date: '2026'
+    title_hi: 'निराला सभागार में अतिथियों द्वारा अंगवस्त्र एवं सम्मान पत्र भेंट',
+    title_en: 'Angavastram & Citation Presentation at Nirala Auditorium',
+    tag_hi: 'सम्मान समारोह',
+    tag_en: 'Honor Ceremony',
+    date: '2026 — लखनऊ अधिवेशन'
   },
   {
     id: 'gal-4',
     src: 'assets/gallery_4.jpg',
-    title_hi: 'राष्ट्रीय अधिवेशन मंच पर सम्मानित सदस्यों के साथ संस्था के पदाधिकारी',
-    title_en: 'Trust Dignitaries with Honored Members on Stage at National Convention',
-    tag_hi: 'सामाजिक कार्यक्रम',
-    tag_en: 'Community Event',
-    date: '2026'
+    title_hi: 'राष्ट्रीय अधिवेशन — सम्मानित सदस्यों के साथ ट्रस्ट के पदाधिकारी',
+    title_en: 'Trust Office Bearers with Honored Members at National Convention',
+    tag_hi: 'सेवा कार्यक्रम',
+    tag_en: 'Service Program',
+    date: '2026 — ट्रस्ट कार्यक्रम'
   },
   {
     id: 'gal-5',
     src: 'assets/gallery_5.jpg',
     title_hi: 'राष्ट्रीय ध्वजारोहण एवं सामाजिक सौहार्द व एकता कार्यक्रम',
-    title_en: 'National Flag Hoisting & Social Harmony & Unity Program',
+    title_en: 'National Flag Hoisting & Social Harmony Unity Program',
     tag_hi: 'राष्ट्रीय पर्व',
     tag_en: 'National Festival',
-    date: '2026'
+    date: '2026 — ट्रस्ट प्रांगण'
   }
 ];
 
@@ -1434,23 +1434,103 @@ function renderGallery() {
 
   container.innerHTML = photos.map((item, index) => {
     const title = isHi ? (item.title_hi || item.title || item.title_en) : (item.title_en || item.title || item.title_hi);
-    const tag = isHi ? (item.tag_hi || item.tag || 'सेवा यात्रा') : (item.tag_en || item.tag || 'Gallery');
+    const tag   = isHi ? (item.tag_hi   || item.tag   || 'सेवा यात्रा')  : (item.tag_en   || item.tag   || 'Gallery');
+    const date  = item.date || '';
     return `
-      <article class="gallery-card" data-gallery-id="${item.id || index}">
-        <div class="gallery-img-wrap" onclick="openDocModal('${item.src}')" title="${title}">
+      <article class="gallery-card" data-gallery-id="${item.id || index}" data-category="${tag}">
+        <div class="gallery-img-wrap" onclick="openGalleryLightbox(${index})" title="${title}">
           <img src="${item.src}" alt="${title}" class="gallery-img" loading="lazy">
           <div class="gallery-overlay">
-            <span class="gallery-zoom-badge">🔍 बड़ी तस्वीर देखें</span>
+            <span class="gallery-zoom-badge">🔍 ${isHi ? 'बड़ी तस्वीर देखें' : 'View Full Photo'}</span>
           </div>
           <span class="gallery-chip">${tag}</span>
+          <span class="gallery-num-badge">${index + 1}</span>
         </div>
         <div class="gallery-info">
           <h4 class="gallery-card-title">${title}</h4>
-          ${item.date ? `<span class="gallery-date">📅 ${item.date}</span>` : ''}
+          ${date ? `<span class="gallery-date">📅 ${date}</span>` : ''}
         </div>
       </article>
     `;
   }).join('');
+
+  // Update count label
+  const countLabel = document.getElementById('gallery-count-label');
+  if (countLabel) {
+    countLabel.textContent = isHi ? `${photos.length} तस्वीरें` : `${photos.length} Photos`;
+  }
+
+  // Reset filter to 'all' on re-render
+  filterGallery('all');
+}
+
+// ===== GALLERY FILTER =====
+function filterGallery(category) {
+  const cards = document.querySelectorAll('#gallery-grid .gallery-card');
+  cards.forEach(card => {
+    if (category === 'all' || card.dataset.category === category) {
+      card.classList.remove('gallery-hidden');
+    } else {
+      card.classList.add('gallery-hidden');
+    }
+  });
+  // Update active button
+  document.querySelectorAll('.gallery-filter-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.filter === category);
+  });
+  // Update count
+  const visible = document.querySelectorAll('#gallery-grid .gallery-card:not(.gallery-hidden)').length;
+  const countLabel = document.getElementById('gallery-count-label');
+  if (countLabel) {
+    const isHi = appState.lang === 'hi';
+    countLabel.textContent = isHi ? `${visible} तस्वीरें दिखाई जा रही हैं` : `${visible} Photos Shown`;
+  }
+}
+
+// ===== GALLERY LIGHTBOX =====
+let _lightboxPhotos = [];
+let _lightboxIndex  = 0;
+
+function openGalleryLightbox(index) {
+  _lightboxPhotos = getGalleryPhotos();
+  _lightboxIndex  = index;
+  _showLightboxFrame();
+  const lb = document.getElementById('gallery-lightbox');
+  if (lb) lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  // Keyboard navigation
+  document.addEventListener('keydown', _lightboxKeyHandler);
+}
+
+function _showLightboxFrame() {
+  const photos = _lightboxPhotos;
+  if (!photos.length) return;
+  const item   = photos[_lightboxIndex];
+  const isHi   = appState.lang === 'hi';
+  const title  = isHi ? (item.title_hi || item.title_en || '') : (item.title_en || item.title_hi || '');
+  document.getElementById('lightbox-img').src     = item.src;
+  document.getElementById('lightbox-img').alt     = title;
+  document.getElementById('lightbox-title').textContent   = title;
+  document.getElementById('lightbox-counter').textContent = `${_lightboxIndex + 1} / ${photos.length}`;
+}
+
+function galleryLightboxNav(dir) {
+  _lightboxIndex = (_lightboxIndex + dir + _lightboxPhotos.length) % _lightboxPhotos.length;
+  _showLightboxFrame();
+}
+
+function closeGalleryLightbox(e) {
+  if (e && e.target !== e.currentTarget) return; // only backdrop click
+  const lb = document.getElementById('gallery-lightbox');
+  if (lb) lb.classList.remove('open');
+  document.body.style.overflow = '';
+  document.removeEventListener('keydown', _lightboxKeyHandler);
+}
+
+function _lightboxKeyHandler(e) {
+  if (e.key === 'ArrowRight' || e.key === 'ArrowDown')  galleryLightboxNav(1);
+  if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')    galleryLightboxNav(-1);
+  if (e.key === 'Escape') closeGalleryLightbox();
 }
 
 // Real-time synchronization when updated from admin.html

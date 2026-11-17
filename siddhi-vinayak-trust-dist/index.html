@@ -1153,75 +1153,107 @@
   </section>
 
   <!-- ================= PHOTO GALLERY (SEVA & SAMMAN) ================= -->
-  <section class="section" id="gallery">
+  <section class="section gallery-section-bg" id="gallery">
     <div class="section-container">
       <div class="section-header">
         <span class="section-subtitle-tag" data-i18n="gallery_badge">Photo Gallery • Seva Yatra</span>
-        <h2 class="section-title" data-i18n="gallery_title">Trust Activities & Honors Gallery</h2>
+        <h2 class="section-title" data-i18n="gallery_title">Trust Activities &amp; Honors Gallery</h2>
         <p class="section-desc" data-i18n="gallery_desc">Glimpses of conferences, national conventions, journalist honor ceremonies, flag hoisting, and public welfare initiatives by Siddhi Vinayak Jan Kalyan Trust.</p>
         <div class="gold-divider"></div>
       </div>
 
+      <!-- Gallery Filter Tabs -->
+      <div class="gallery-filter-bar" id="gallery-filter-bar" role="tablist" aria-label="Gallery Category Filter">
+        <button class="gallery-filter-btn active" data-filter="all" onclick="filterGallery('all')" role="tab">🖼️ <span data-i18n="gallery_filter_all">सभी</span></button>
+        <button class="gallery-filter-btn" data-filter="राष्ट्रीय अधिवेशन" onclick="filterGallery('राष्ट्रीय अधिवेशन')" role="tab">🏛️ अधिवेशन</button>
+        <button class="gallery-filter-btn" data-filter="सम्मान समारोह" onclick="filterGallery('सम्मान समारोह')" role="tab">🏅 सम्मान</button>
+        <button class="gallery-filter-btn" data-filter="सेवा कार्यक्रम" onclick="filterGallery('सेवा कार्यक्रम')" role="tab">🤝 सेवा</button>
+        <button class="gallery-filter-btn" data-filter="राष्ट्रीय पर्व" onclick="filterGallery('राष्ट्रीय पर्व')" role="tab">🇮🇳 राष्ट्रीय पर्व</button>
+      </div>
+
+      <!-- Gallery Grid — dynamically populated by app.js renderGallery() -->
       <div class="gallery-grid" id="gallery-grid">
-        <article class="gallery-card" data-gallery-id="gal-1">
-          <div class="gallery-img-wrap" onclick="openDocModal('assets/gallery_1.jpg')" title="7वां राष्ट्रीय अधिवेशन तथा पत्रकार सम्मान समारोह — मुख्य अतिथि मंच">
-            <img src="assets/gallery_1.jpg" alt="7वां राष्ट्रीय अधिवेशन तथा पत्रकार सम्मान समारोह — मुख्य अतिथि मंच" class="gallery-img" loading="lazy">
+        <!-- JS renders all cards from localStorage (admin-editable) -->
+        <!-- Static fallback shown before JS loads -->
+        <article class="gallery-card" data-gallery-id="gal-1" data-category="राष्ट्रीय अधिवेशन">
+          <div class="gallery-img-wrap" onclick="openGalleryLightbox(0)" title="7वां राष्ट्रीय अधिवेशन — मुख्य अतिथि मंच">
+            <img src="assets/gallery_1.jpg" alt="7वां राष्ट्रीय अधिवेशन — मुख्य अतिथि मंच" class="gallery-img" loading="lazy">
             <div class="gallery-overlay"><span class="gallery-zoom-badge">🔍 बड़ी तस्वीर देखें</span></div>
             <span class="gallery-chip">राष्ट्रीय अधिवेशन</span>
+            <span class="gallery-num-badge">1</span>
           </div>
           <div class="gallery-info">
-            <h4 class="gallery-card-title">7वां राष्ट्रीय अधिवेशन तथा पत्रकार सम्मान समारोह — मुख्य अतिथि मंच</h4>
-            <span class="gallery-date">📅 निराला सभागार</span>
+            <h4 class="gallery-card-title">7वां राष्ट्रीय अधिवेशन तथा पत्रकार सम्मान समारोह</h4>
+            <span class="gallery-date">📅 निराला सभागार, लखनऊ</span>
           </div>
         </article>
-
-        <article class="gallery-card" data-gallery-id="gal-2">
-          <div class="gallery-img-wrap" onclick="openDocModal('assets/gallery_2.jpg')" title="विशिष्ट सम्मान एवं प्रशस्ति पत्र अर्पण">
+        <article class="gallery-card" data-gallery-id="gal-2" data-category="सम्मान समारोह">
+          <div class="gallery-img-wrap" onclick="openGalleryLightbox(1)" title="विशिष्ट सम्मान एवं प्रशस्ति पत्र अर्पण">
             <img src="assets/gallery_2.jpg" alt="विशिष्ट सम्मान एवं प्रशस्ति पत्र अर्पण" class="gallery-img" loading="lazy">
             <div class="gallery-overlay"><span class="gallery-zoom-badge">🔍 बड़ी तस्वीर देखें</span></div>
             <span class="gallery-chip">सम्मान समारोह</span>
+            <span class="gallery-num-badge">2</span>
           </div>
           <div class="gallery-info">
-            <h4 class="gallery-card-title">विशिष्ट सम्मान एवं प्रशस्ति पत्र अर्पण — भारतीय पत्रकार सुरक्षा परिषद</h4>
-            <span class="gallery-date">📅 राष्ट्रीय सम्मेलन</span>
+            <h4 class="gallery-card-title">विशिष्ट सम्मान एवं प्रशस्ति पत्र अर्पण</h4>
+            <span class="gallery-date">📅 भारतीय पत्रकार सुरक्षा परिषद</span>
           </div>
         </article>
-
-        <article class="gallery-card" data-gallery-id="gal-3">
-          <div class="gallery-img-wrap" onclick="openDocModal('assets/gallery_3.jpg')" title="स्मृति चिह्न एवं अंगवस्त्र भेंट कार्यक्रम">
+        <article class="gallery-card" data-gallery-id="gal-3" data-category="सम्मान समारोह">
+          <div class="gallery-img-wrap" onclick="openGalleryLightbox(2)" title="स्मृति चिह्न एवं अंगवस्त्र भेंट कार्यक्रम">
             <img src="assets/gallery_3.jpg" alt="स्मृति चिह्न एवं अंगवस्त्र भेंट कार्यक्रम" class="gallery-img" loading="lazy">
             <div class="gallery-overlay"><span class="gallery-zoom-badge">🔍 बड़ी तस्वीर देखें</span></div>
-            <span class="gallery-chip">पत्रकार सम्मान</span>
+            <span class="gallery-chip">सम्मान समारोह</span>
+            <span class="gallery-num-badge">3</span>
           </div>
           <div class="gallery-info">
-            <h4 class="gallery-card-title">स्मृति चिह्न एवं अंगवस्त्र भेंट — समाजसेवियों एवं पत्रकारों का सम्मान</h4>
+            <h4 class="gallery-card-title">स्मृति चिह्न एवं अंगवस्त्र भेंट — पत्रकार सम्मान</h4>
             <span class="gallery-date">📅 लखनऊ अधिवेशन</span>
           </div>
         </article>
-
-        <article class="gallery-card" data-gallery-id="gal-4">
-          <div class="gallery-img-wrap" onclick="openDocModal('assets/gallery_4.jpg')" title="ध्वजारोहण एवं राष्ट्रभक्ति उत्सव">
+        <article class="gallery-card" data-gallery-id="gal-4" data-category="राष्ट्रीय पर्व">
+          <div class="gallery-img-wrap" onclick="openGalleryLightbox(3)" title="ध्वजारोहण एवं राष्ट्रभक्ति उत्सव">
             <img src="assets/gallery_4.jpg" alt="ध्वजारोहण एवं राष्ट्रभक्ति उत्सव" class="gallery-img" loading="lazy">
             <div class="gallery-overlay"><span class="gallery-zoom-badge">🔍 बड़ी तस्वीर देखें</span></div>
             <span class="gallery-chip">राष्ट्रीय पर्व</span>
+            <span class="gallery-num-badge">4</span>
           </div>
           <div class="gallery-info">
             <h4 class="gallery-card-title">ध्वजारोहण एवं राष्ट्रभक्ति उत्सव — भारत माता की जय</h4>
             <span class="gallery-date">📅 ट्रस्ट प्रांगण</span>
           </div>
         </article>
-
-        <article class="gallery-card" data-gallery-id="gal-5">
-          <div class="gallery-img-wrap" onclick="openDocModal('assets/gallery_5.jpg')" title="सामूहिक विचार-मंथन एवं समाज कल्याण बैठक">
+        <article class="gallery-card" data-gallery-id="gal-5" data-category="सेवा कार्यक्रम">
+          <div class="gallery-img-wrap" onclick="openGalleryLightbox(4)" title="सामूहिक विचार-मंथन एवं समाज कल्याण बैठक">
             <img src="assets/gallery_5.jpg" alt="सामूहिक विचार-मंथन एवं समाज कल्याण बैठक" class="gallery-img" loading="lazy">
             <div class="gallery-overlay"><span class="gallery-zoom-badge">🔍 बड़ी तस्वीर देखें</span></div>
-            <span class="gallery-chip">विचार गोष्ठी</span>
+            <span class="gallery-chip">सेवा कार्यक्रम</span>
+            <span class="gallery-num-badge">5</span>
           </div>
           <div class="gallery-info">
             <h4 class="gallery-card-title">सामूहिक विचार-मंथन एवं समाज कल्याण बैठक</h4>
             <span class="gallery-date">📅 ट्रस्ट सभा कक्ष</span>
           </div>
         </article>
+      </div>
+
+      <!-- Gallery photo count -->
+      <div class="gallery-footer-info">
+        <span id="gallery-count-label" class="gallery-count-label">5 तस्वीरें</span>
+      </div>
+    </div>
+
+    <!-- ===== GALLERY LIGHTBOX MODAL ===== -->
+    <div class="gallery-lightbox" id="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Photo Lightbox" onclick="closeGalleryLightbox(event)">
+      <button class="lightbox-close-btn" onclick="closeGalleryLightbox()" aria-label="Close">&times;</button>
+      <button class="lightbox-nav-btn lightbox-prev" onclick="galleryLightboxNav(-1)" aria-label="Previous photo">&#8249;</button>
+      <button class="lightbox-nav-btn lightbox-next" onclick="galleryLightboxNav(1)" aria-label="Next photo">&#8250;</button>
+      <div class="lightbox-inner" onclick="event.stopPropagation()">
+        <img src="" alt="" id="lightbox-img" class="lightbox-img">
+        <div class="lightbox-caption">
+          <span id="lightbox-title" class="lightbox-title"></span>
+          <span id="lightbox-counter" class="lightbox-counter"></span>
+        </div>
       </div>
     </div>
   </section>
