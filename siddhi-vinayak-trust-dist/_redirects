@@ -1,3 +1,4 @@
-/admin         /admin.html   200
-/admin.html    /admin.html   200
-/*             /index.html   200
+# Cloudflare Workers Static Assets Redirects
+# Rules like `/admin /admin.html 200` and `/* /index.html 200` cause infinite loops
+# on Cloudflare because Cloudflare automatically normalizes clean URLs and strips `.html`.
+# Cloudflare natively serves `index.html` for root `/` and `admin.html` for `/admin`.

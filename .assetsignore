@@ -1,0 +1,47 @@
+# Version Control & Tooling
+.git
+.github
+.assetsignore
+.gitignore
+
+# Documentation & Internal Notes
+README.md
+GEMINI.md
+
+# Deployment & Platform Configurations
+.netlify
+.wrangler
+netlify.toml
+
+# Redundant Build / Distribution Copies
+siddhi-vinayak-trust-dist
+
+# Backup Archives & Large Bundles
+*.zip
+*.tar.gz
+*.tgz
+siddhi-vinayak-jan-kalyan-trust-website.zip
+
+# Environment & Secret Files
+.env
+.env.*
+
+# Package & Dependency Files
+node_modules
+package.json
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Log & Temporary Files
+*.log
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+*.orig
+
+# OS Metadata
+.DS_Store
+Thumbs.db
